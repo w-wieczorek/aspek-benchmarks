@@ -35,7 +35,7 @@ for i, (size, seed) in enumerate(seeds):
     else:
         G = generate_min_degree_instance(size, seed)
     n_nodes = G.number_of_nodes()
-    with open(f"problem{i+1:02d}.lp", "w") as f:
+    with open(f"p{i+1}.lp", "w") as f:
         f.write(f"node(0..{n_nodes-1}).\n")
         for u, v in G.edges():
             f.write(f"edge({u}, {v}).\n")

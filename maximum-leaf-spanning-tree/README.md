@@ -18,13 +18,13 @@ Instances are randomly generated with two scenarios:
 
 Measured with Clingo 5.6.2.
 
--   `problem01.lp`: 51.829s.
--   `problem02.lp`: 67.895s.
--   `problem03.lp`: 111.803s.
--   `problem04.lp`: 202.521s.
--   `problem05.lp`: 288.372s.
--   `problem06.lp`: 8.369s.
--   `problem07.lp`: 41.712s.
--   `problem08.lp`: 175.536s.
--   `problem09.lp`: 127.363s.
--   `problem10.lp`: 268.736s.
+-   `p1.lp`: 51.829s.
+-   `p2.lp`: 67.895s.
+-   `p3.lp`: 111.803s.
+-   `p4.lp`: 202.521s.
+-   `p5.lp`: 288.372s.
+-   `p6.lp`: 8.369s.
+-   `p7.lp`: 41.712s.
+-   `p8.lp`: 175.536s.
+-   `p9.lp`: 127.363s.
+-   `p10.lp`: 268.736s.
