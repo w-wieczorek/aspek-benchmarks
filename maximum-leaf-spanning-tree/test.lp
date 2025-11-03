@@ -499,15 +499,3 @@ edge(0, 53).
 edge(0, 54).
 edge(0, 55).
 edge(0, 57).
-
-{root(V) : node(V)} = 1.
-{parent_of(U, V)} :- edge(U, V).
-{parent_of(U, V)} :- edge(V, U). 
-:- edge(U, V), parent_of(U, V), parent_of(V, U).
-:- root(V), node(U), parent_of(U, V).
-is_parent(U) :- parent_of(U, V).
-:- parent_of(U, W), parent_of(V, W), U < V.
-reachable(V) :- root(U), parent_of(U, V).
-reachable(V) :- reachable(U), parent_of(U, V).
-:- node(V), not root(V), not reachable(V).
-:~ is_parent(V). [1@1, V]
