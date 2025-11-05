@@ -134,49 +134,6 @@ arc(63,32).
 arc(23,32).
 arc(14,32).
 arc(70,32).
-arc(21,32).
-arc(34,32).
-arc(25,33).
-arc(8,33).
-arc(1,33).
-arc(19,34).
-arc(54,34).
-arc(33,34).
-arc(42,34).
-arc(64,34).
-arc(20,34).
-arc(66,34).
-arc(30,34).
-arc(36,35).
-arc(24,35).
-arc(19,36).
-arc(35,36).
-arc(40,36).
-arc(2,36).
-arc(51,36).
-arc(6,36).
-arc(32,36).
-arc(58,37).
-arc(52,37).
-arc(62,37).
-arc(69,37).
-arc(9,37).
-arc(27,37).
-arc(49,37).
-arc(61,38).
-arc(60,38).
-arc(16,38).
-arc(47,38).
-arc(41,38).
-arc(60,39).
-arc(65,39).
-arc(35,39).
-arc(54,39).
-arc(4,39).
-arc(62,39).
-arc(20,39).
-arc(33,39).
-arc(36,39).
 arc(10,40).
 arc(17,40).
 arc(24,40).
@@ -299,14 +256,3 @@ arc(12,70).
 arc(17,70).
 arc(32,70).
 arc(36,70).
-
-{ remove(U, V) } :- arc(U, V).
-remaining(U, V) :- arc(U, V), not remove(U, V).
-
-reachable(U, V) :- remaining(U, V).
-reachable(U, W) :- reachable(U, V), remaining(V, W).
-
-:- reachable(V, V), vtx(V).
-
-:~ remove(U, V). [1@1, U, V]
-
