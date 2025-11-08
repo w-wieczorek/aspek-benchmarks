@@ -18,6 +18,8 @@ fi
 
 folders=("maximum-leaf-spanning-tree" "feedback-arc-set" "visit-all", "stacker-crane", "knight-tour-with-holes")
 problems=("p1.lp" "p2.lp" "p3.lp", "p4.lp", "p5.lp", "p6.lp", "p7.lp", "p8.lp", "p9.lp", "p10.lp")
+CUR_DIR="$(pwd)"
+
 
 for folder in "${folders[@]}"; do
     for problem in "${problems[@]}"; do
@@ -26,7 +28,7 @@ for folder in "${folders[@]}"; do
         if [ -f "$problem_filepath" ] && [ -f "$encoding_filepath" ]; then
             "$PROGRAM" monitor.py -t 600 "dlv --mode=idlv --no-facts $problem_filepath $encoding_filepath | lp2normal2 -ok -E | aspirena"
             sync && echo 3 | tee /proc/sys/vm/drop_caches
-            "$PROGRAM" monitor.py -t 600 "mingor.sh $problem_filepath $encoding_filepath"
+            "$PROGRAM" monitor.py -t 600 "mingo.sh $problem_filepath $encoding_filepath"
             sync && echo 3 | tee /proc/sys/vm/drop_caches
             "$PROGRAM" monitor.py -t 600 "clingo $problem_filepath $encoding_filepath"
             sync && echo 3 | tee /proc/sys/vm/drop_caches
