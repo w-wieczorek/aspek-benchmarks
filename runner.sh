@@ -26,7 +26,7 @@ for folder in "${folders[@]}"; do
         if [ -f "$problem_filepath" ] && [ -f "$encoding_filepath" ]; then
             "$PROGRAM" monitor.py -t 600 "dlv --mode=idlv --no-facts $problem_filepath $encoding_filepath | lp2normal2 -ok -E | aspirena"
             sync && echo 3 | tee /proc/sys/vm/drop_caches
-            "$PROGRAM" monitor.py -t 600 "mingo.sh $problem_filepath $encoding_filepath"
+            "$PROGRAM" monitor.py -t 600 "mingor.sh $problem_filepath $encoding_filepath"
             sync && echo 3 | tee /proc/sys/vm/drop_caches
             "$PROGRAM" monitor.py -t 600 "clingo $problem_filepath $encoding_filepath"
             sync && echo 3 | tee /proc/sys/vm/drop_caches
