@@ -18,7 +18,8 @@ def send_notification(title, message, color=0x00ff00):
     try:
         elapsed_time = time.time() - start_time if start_time else None
         time_info = f"\n\nTotal execution time (including monitoring overhead): {elapsed_time:.2f} seconds" if elapsed_time is not None else ""
-        message = re.sub(r"[^\x00-\x7F]+", "", re.sub(r"\s+", " ", message.replace("\n", "--")))[-1024:]
+        message = re.sub(r"[^\x00-\x7F]+", "", re.sub(r"\s+", " ", message.replace("\n", "--")))
+        message = message[:256] + " ... " + message[-256:]
         data = {
             "embeds": [{
                 "title": title,
