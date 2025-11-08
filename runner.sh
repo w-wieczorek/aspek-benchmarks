@@ -1,12 +1,5 @@
 #!/bin/bash
 
-if [[ $EUID -ne 0 ]]; then
-    echo "Some operations in this script (like clearing system caches) require root privileges."
-    echo "Attempting to re-run this script with sudo..."
-    exec sudo "$0" "$@"
-fi
-
-
 if command -v python3 >/dev/null 2>&1; then
     PROGRAM="python3"
 elif command -v python >/dev/null 2>&1; then
@@ -27,13 +20,13 @@ for folder in "${folders[@]}"; do
         encoding_filepath="$folder/encoding.lp"
         if [ -f "$problem_filepath" ] && [ -f "$encoding_filepath" ]; then
             "$PROGRAM" monitor.py -t 600 "dlv --mode=idlv --no-facts $problem_filepath $encoding_filepath | lp2normal2 -ok -E | aspirena"
-            sync && echo 3 | tee /proc/sys/vm/drop_caches
+            #sync && echo 3 | tee /proc/sys/vm/drop_caches
             "$PROGRAM" monitor.py -t 600 "mingo.sh $problem_filepath $encoding_filepath"
-            sync && echo 3 | tee /proc/sys/vm/drop_caches
+            #sync && echo 3 | tee /proc/sys/vm/drop_caches
             "$PROGRAM" monitor.py -t 600 "clingo $problem_filepath $encoding_filepath"
-            sync && echo 3 | tee /proc/sys/vm/drop_caches
+            #sync && echo 3 | tee /proc/sys/vm/drop_caches
             "$PROGRAM" monitor.py -t 600 "dlv $problem_filepath $encoding_filepath"
-            sync && echo 3 | tee /proc/sys/vm/drop_caches
+            #sync && echo 3 | tee /proc/sys/vm/drop_caches
         else
             echo "File $problem_filepath or $encoding_filepath not found, skipping."
         fi
