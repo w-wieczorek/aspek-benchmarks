@@ -9,7 +9,7 @@ else
     exit 1
 fi
 
-folders=("maximum-leaf-spanning-tree" "feedback-arc-set" "visit-all" "stacker-crane" "knight-tour-with-holes")
+folders=("connected-maximum-density-still-life" "degree-bounded-connected-subgraph" "dominating-set" "fault-detection-in-directed-graphs" "longest-circuit" "maximal-clique" "minimum-cover" "set-packing" "solitaire")
 problems=("p1.lp" "p2.lp" "p3.lp" "p4.lp" "p5.lp" "p6.lp" "p7.lp" "p8.lp" "p9.lp" "p10.lp")
 CUR_DIR="$(pwd)"
 
