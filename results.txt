@@ -1,0 +1,180 @@
+===============================================
+EXECUTION TIME COMPARISON SUMMARY
+===============================================
+
+Problem: feedback-arc-set
+-----------------------------------------------
+Dataset       dlv    clingo  aspirena     mingo
+-----------------------------------------------
+p1          0.07s     5.73s     2.87s    43.64s
+p2          8.87s       T/O    80.16s       T/O
+p3          0.38s   589.89s    17.67s   152.94s
+p4          0.17s     0.07s     2.70s     8.82s
+p5          0.28s       T/O    10.88s    47.67s
+p6          0.38s       T/O    35.47s       T/O
+p7          0.53s       T/O    27.57s    31.13s
+p8          0.53s       T/O    35.63s   486.48s
+p9          0.67s       T/O    95.38s       T/O
+p10         1.69s       T/O   366.53s       T/O
+
+Best times per dataset:
+  p1: dlv (0.07s)
+  p2: dlv (8.87s)
+  p3: dlv (0.38s)
+  p4: clingo (0.07s)
+  p5: dlv (0.28s)
+  p6: dlv (0.38s)
+  p7: dlv (0.53s)
+  p8: dlv (0.53s)
+  p9: dlv (0.67s)
+  p10: dlv (1.69s)
+
+Problem: knight-tour-with-holes
+-----------------------------------------------
+Dataset       dlv    clingo  aspirena     mingo
+-----------------------------------------------
+p1          6.83s     1.70s    36.38s   217.43s
+p2          6.12s     1.61s    36.69s   203.39s
+p3          7.69s     1.56s    35.49s   230.57s
+p4          6.62s     1.64s    41.43s   231.26s
+p5          6.22s     1.55s    36.49s   223.73s
+p6         10.09s     2.52s    35.82s       T/O
+p7          6.33s     2.05s    50.24s   331.50s
+p8          6.48s     1.70s    35.28s   250.50s
+p9          5.15s     1.39s    35.51s   238.35s
+p10         5.72s     1.03s    27.92s   240.84s
+
+Best times per dataset:
+  p1: clingo (1.70s)
+  p2: clingo (1.61s)
+  p3: clingo (1.56s)
+  p4: clingo (1.64s)
+  p5: clingo (1.55s)
+  p6: clingo (2.52s)
+  p7: clingo (2.05s)
+  p8: clingo (1.70s)
+  p9: clingo (1.39s)
+  p10: clingo (1.03s)
+
+Problem: maximum-leaf-spanning-tree
+-----------------------------------------------
+Dataset       dlv    clingo  aspirena     mingo
+-----------------------------------------------
+p1         14.35s    60.19s     1.27s     4.84s
+p2        187.59s    82.49s     0.52s     3.90s
+p3        408.93s   380.94s     0.62s     6.50s
+p4        392.81s   490.59s     1.69s    15.86s
+p5            T/O       T/O     0.89s    13.15s
+p6         23.68s    19.41s     3.87s    21.56s
+p7        148.60s   130.50s     7.86s    13.54s
+p8            T/O   516.33s     4.78s    31.48s
+p9        475.43s   246.82s    24.36s    68.17s
+p10           T/O   272.38s     8.94s    14.32s
+
+Best times per dataset:
+  p1: aspirena (1.27s)
+  p2: aspirena (0.52s)
+  p3: aspirena (0.62s)
+  p4: aspirena (1.69s)
+  p5: aspirena (0.89s)
+  p6: aspirena (3.87s)
+  p7: aspirena (7.86s)
+  p8: aspirena (4.78s)
+  p9: aspirena (24.36s)
+  p10: aspirena (8.94s)
+
+Problem: stacker-crane
+-----------------------------------------------
+Dataset       dlv    clingo  aspirena     mingo
+-----------------------------------------------
+p1          4.56s     0.33s     3.98s    16.91s
+p2        142.02s    47.39s     5.24s   116.52s
+p3          8.99s     0.48s     4.27s    21.19s
+p4         10.20s     1.69s     4.32s       T/O
+p5          7.04s    12.61s     4.17s    44.54s
+p6          8.08s     3.15s     4.74s    41.37s
+p7          8.44s     0.75s     5.48s    41.42s
+p8          4.47s     2.65s     4.53s    69.73s
+p9         15.52s    23.83s     4.93s   129.41s
+p10         3.05s    19.16s     4.12s    11.77s
+
+Best times per dataset:
+  p1: clingo (0.33s)
+  p2: aspirena (5.24s)
+  p3: clingo (0.48s)
+  p4: clingo (1.69s)
+  p5: aspirena (4.17s)
+  p6: clingo (3.15s)
+  p7: clingo (0.75s)
+  p8: clingo (2.65s)
+  p9: aspirena (4.93s)
+  p10: dlv (3.05s)
+
+Problem: visit-all
+-----------------------------------------------
+Dataset       dlv    clingo  aspirena     mingo
+-----------------------------------------------
+p1          0.28s     0.13s     1.94s     3.96s
+p2          0.53s     0.18s     3.96s     1.94s
+p3          0.07s     0.13s     2.55s     6.71s
+p4          0.23s     0.12s     3.26s    12.85s
+p5         42.27s    16.26s    18.32s    65.88s
+p6          0.12s     0.08s     0.90s     0.44s
+p7          0.13s     0.04s     0.19s     0.43s
+p8         55.87s     6.56s    10.68s    59.02s
+p9            T/O       T/O   178.46s   597.41s
+p10           T/O   344.22s    21.07s   473.94s
+
+Best times per dataset:
+  p1: clingo (0.13s)
+  p2: clingo (0.18s)
+  p3: dlv (0.07s)
+  p4: clingo (0.12s)
+  p5: clingo (16.26s)
+  p6: clingo (0.08s)
+  p7: clingo (0.04s)
+  p8: clingo (6.56s)
+  p9: aspirena (178.46s)
+  p10: aspirena (21.07s)
+
+===============================================
+OVERALL STATISTICS
+===============================================
+
+Solver rankings per problem (total time, success rate):
+Problem: feedback-arc-set
+  1. dlv      - Total: 13.57s (10/10)
+  2. aspirena - Total: 674.86s (10/10)
+  3. mingo    - Total: 3170.68s (6/10)
+  4. clingo   - Total: 4795.69s (3/10)
+
+Problem: knight-tour-with-holes
+  1. clingo   - Total: 16.75s (10/10)
+  2. dlv      - Total: 67.25s (10/10)
+  3. aspirena - Total: 371.25s (10/10)
+  4. mingo    - Total: 2767.57s (9/10)
+
+Problem: maximum-leaf-spanning-tree
+  1. aspirena - Total: 54.80s (10/10)
+  2. mingo    - Total: 193.32s (10/10)
+  3. clingo   - Total: 2799.65s (9/10)
+  4. dlv      - Total: 3451.39s (7/10)
+
+Problem: stacker-crane
+  1. aspirena - Total: 45.78s (10/10)
+  2. clingo   - Total: 112.04s (10/10)
+  3. dlv      - Total: 212.37s (10/10)
+  4. mingo    - Total: 1092.86s (9/10)
+
+Problem: visit-all
+  1. aspirena - Total: 241.33s (10/10)
+  2. clingo   - Total: 967.72s (9/10)
+  3. mingo    - Total: 1222.58s (10/10)
+  4. dlv      - Total: 1299.50s (8/10)
+
+
+Average execution times by solver:
+dlv        - Avg:  100.88s
+clingo     - Avg:  173.84s
+aspirena   - Avg:   27.76s
+mingo      - Avg:  168.94s
