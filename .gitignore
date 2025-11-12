@@ -3,4 +3,4 @@
 .venv
 tmp
 *.log
-dc-messages-parser/
+out/*.json

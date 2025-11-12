@@ -1,0 +1,1 @@
+To generate results, you need to copy Discord messages as JSON by using Discrub (Chrome extension).
