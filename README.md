@@ -75,3 +75,15 @@ To run experiments for a specific problem domain, modify `runner.sh` to specify 
 ```
 
 The script will run all four solvers (dlv, clingo, aspirena, and mingo) on each problem instance in the specified domain(s).
+
+## Authors
+
+Contributors names and contact info:
+
+-   [Wojciech Wieczorek](https://kiia.ubb.edu.pl/pracownicy/dr-habwojciechwieczorek),
+-   [Arkadiusz Nowakowski](https://ab.us.edu.pl/emp?id=46971),
+-   [Łukasz Strąk](https://ab.us.edu.pl/emp?id=47011).
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the LICENSE.md file for details
