@@ -25,6 +25,18 @@ def extract_command_info(description: str) -> Optional[Tuple[str, str, str]]:
         solver = solver[:-3]
     if solver == 'mingo.sh':
         solver = 'mingo'
+    if solver == 'maxmodels.sh':
+        solver = 'maxmodels'
+    if solver == 'ezsmt':
+        solver = 'ezsmt'
+    if solver == 'acyc2solver_mip_fvs.sh':
+        solver = 'acyc2solver_mip_fvs'
+    if solver == 'acyc2solver_mip_ve.sh':
+        solver = 'acyc2solver_mip_ve'
+    if solver == 'clingo' and '--opt-strategy=usc' in description:
+        solver = 'clingo usc'
+    elif solver == 'clingo':
+        solver = 'clingo bnb'
     path_match = re.search(r'(\w+(?:-\w+)*)/(p\d+)\.lp', description)
     if path_match:
         problem_name = path_match.group(1)
@@ -38,9 +50,7 @@ def extract_execution_time(description: str) -> Optional[float]:
         return float(match.group(1))
     return None
 
-def parse_messages(json_file: str) -> Dict[str, Dict[str, Dict[str, float]]]:
-    with open(json_file, 'r', encoding='utf-8') as f:
-        messages = json.load(f)
+def parse_messages(messages: list) -> Dict[str, Dict[str, Dict[str, float]]]:
     results = defaultdict(lambda: defaultdict(dict))
     for message in messages:
         if 'embeds' not in message or not message['embeds']:
@@ -58,6 +68,7 @@ def parse_messages(json_file: str) -> Dict[str, Dict[str, Dict[str, float]]]:
                 continue
             if solver not in results[problem_name][dataset]:
                 results[problem_name][dataset][solver] = exec_time
+    #results[problem_name][dataset][solver] = exec_time
     return dict(results)
 
 def format_time(seconds: float) -> str:
@@ -75,7 +86,7 @@ def generate_summary(results: Dict[str, Dict[str, Dict[str, float]]]) -> str:
     output.append("EXECUTION TIME COMPARISON SUMMARY")
     output.append("=" * 47)
     
-    solvers = ['dlv', 'clingo', 'aspirena', 'mingo']
+    solvers = ['dlv', 'clingo bnb', 'aspirena', 'mingo', 'maxmodels', 'ezsmt', 'acyc2solver_mip_fvs', 'acyc2solver_mip_ve', 'clingo usc']
     
     for problem_name in sorted(results.keys()):
         output.append(f"\nProblem: {problem_name}")
@@ -164,7 +175,7 @@ def generate_summary(results: Dict[str, Dict[str, Dict[str, float]]]) -> str:
     return "\n".join(output)
 
 def export_to_csv(results: Dict[str, Dict[str, Dict[str, float]]], csv_file: str):
-    solvers = ['dlv', 'clingo', 'aspirena', 'mingo']
+    solvers = ['dlv', 'clingo bnb', 'aspirena', 'mingo', 'maxmodels', 'ezsmt', 'acyc2solver_mip_fvs', 'acyc2solver_mip_ve', 'clingo usc']
     with open(csv_file, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(['Problem', 'Dataset'] + solvers)
@@ -180,8 +191,15 @@ def export_to_csv(results: Dict[str, Dict[str, Dict[str, float]]], csv_file: str
                         row.append('')
                 writer.writerow(row)
 
-json_file = sys.argv[1] if len(sys.argv) > 1 else 'obliczenia_page_1.json'
-results = parse_messages(json_file)
+messages = []
+with open('obliczenia_page_1.json', 'r', encoding='utf-8') as f1, \
+     open('obliczenia_page_2.json', 'r', encoding='utf-8') as f2, \
+     open('obliczenia_page_3.json', 'r', encoding='utf-8') as f3:
+    messages = json.load(f1)
+    messages.extend(json.load(f2))
+    messages.extend(json.load(f3))
+
+results = parse_messages(messages)
 if not results:
     print("No results found!")
     exit(1)

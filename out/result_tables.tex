@@ -1,11 +1,11 @@
-\begin{table}
+\begin{table}[htbp]
 \centering
 \caption{Performance of \textsc{dlv} across all problems.}
 \label{tab:performance-dlv}
-\begin{tabular}{| l | c | r | r |}
-\hline
+\begin{tabular}{lcrr}
+\toprule
 Problem & Suc. & Time & Score \\
-\hline
+\midrule
 connected-maximum-density-still-life & 10/10 & 0.87\,s & 100 \\
 degree-bounded-connected-subgraph & 7/10 & 2034.73\,s & 59 \\
 dominating-set & 10/10 & 3.90\,s & 99 \\
@@ -21,20 +21,20 @@ set-packing & 10/10 & 0.80\,s & 100 \\
 solitaire & 7/10 & 1802.84\,s & 70 \\
 stacker-crane & 10/10 & 212.37\,s & 91 \\
 visit-all & 8/10 & 1299.50\,s & 75 \\
-\hline
-\textbf{Total} & 114/150 & 4349.55\,s & 1045 \\
-\hline
+\midrule
+\textbf{Total} & 114/150 & 25949.55\,s & 1045 \\
+\botrule
 \end{tabular}
 \end{table}
 
-\begin{table}
+\begin{table}[htbp]
 \centering
-\caption{Performance of \textsc{clingo} across all problems.}
-\label{tab:performance-clingo}
-\begin{tabular}{| l | c | r | r |}
-\hline
+\caption{Performance of \textsc{clingo\,\textsubscript{bnb}} across all problems.}
+\label{tab:performance-clingo bnb}
+\begin{tabular}{lcrr}
+\toprule
 Problem & Suc. & Time & Score \\
-\hline
+\midrule
 connected-maximum-density-still-life & 10/10 & 0.64\,s & 100 \\
 degree-bounded-connected-subgraph & 0/10 & 6000.00\,s & 0 \\
 dominating-set & 2/10 & 4877.13\,s & 16 \\
@@ -50,20 +50,20 @@ set-packing & 6/10 & 3537.92\,s & 38 \\
 solitaire & 7/10 & 1801.81\,s & 70 \\
 stacker-crane & 10/10 & 112.04\,s & 93 \\
 visit-all & 9/10 & 967.72\,s & 84 \\
-\hline
-\textbf{Total} & 85/150 & 10831.25\,s & 697 \\
-\hline
+\midrule
+\textbf{Total} & 85/150 & 49831.25\,s & 697 \\
+\botrule
 \end{tabular}
 \end{table}
 
-\begin{table}
+\begin{table}[htbp]
 \centering
 \caption{Performance of \textsc{aspirena} across all problems.}
 \label{tab:performance-aspirena}
-\begin{tabular}{| l | c | r | r |}
-\hline
+\begin{tabular}{lcrr}
+\toprule
 Problem & Suc. & Time & Score \\
-\hline
+\midrule
 connected-maximum-density-still-life & 10/10 & 6.60\,s & 99 \\
 degree-bounded-connected-subgraph & 10/10 & 10.06\,s & 99 \\
 dominating-set & 10/10 & 14.83\,s & 99 \\
@@ -79,20 +79,20 @@ set-packing & 10/10 & 1.22\,s & 100 \\
 solitaire & 9/10 & 1317.79\,s & 78 \\
 stacker-crane & 10/10 & 45.78\,s & 96 \\
 visit-all & 10/10 & 241.33\,s & 92 \\
-\hline
-\textbf{Total} & 149/150 & 2207.22\,s & 1424 \\
-\hline
+\midrule
+\textbf{Total} & 149/150 & 2807.22\,s & 1424 \\
+\botrule
 \end{tabular}
 \end{table}
 
-\begin{table}
+\begin{table}[htbp]
 \centering
 \caption{Performance of \textsc{mingo} across all problems.}
 \label{tab:performance-mingo}
-\begin{tabular}{| l | c | r | r |}
-\hline
+\begin{tabular}{lcrr}
+\toprule
 Problem & Suc. & Time & Score \\
-\hline
+\midrule
 connected-maximum-density-still-life & 10/10 & 3.40\,s & 100 \\
 degree-bounded-connected-subgraph & 10/10 & 2.60\,s & 100 \\
 dominating-set & 10/10 & 28.09\,s & 98 \\
@@ -108,25 +108,196 @@ set-packing & 10/10 & 8.93\,s & 99 \\
 solitaire & 7/10 & 1809.03\,s & 69 \\
 stacker-crane & 9/10 & 1092.86\,s & 72 \\
 visit-all & 10/10 & 1222.58\,s & 83 \\
-\hline
-\textbf{Total} & 141/150 & 5061.65\,s & 1302 \\
-\hline
+\midrule
+\textbf{Total} & 141/150 & 10461.65\,s & 1302 \\
+\botrule
 \end{tabular}
 \end{table}
 
-\begin{table}
+\begin{table}[htbp]
+\centering
+\caption{Performance of \textsc{maxmodels} across all problems.}
+\label{tab:performance-maxmodels}
+\begin{tabular}{lcrr}
+\toprule
+Problem & Suc. & Time & Score \\
+\midrule
+connected-maximum-density-still-life & 10/10 & 1.16\,s & 100 \\
+degree-bounded-connected-subgraph & 10/10 & 695.76\,s & 86 \\
+dominating-set & 10/10 & 9.71\,s & 99 \\
+fault-detection-in-directed-graphs & 10/10 & 9.41\,s & 99 \\
+feedback-arc-set & 10/10 & 139.17\,s & 91 \\
+knight-tour-with-holes & 10/10 & 33.32\,s & 97 \\
+longest-circuit & 10/10 & 51.21\,s & 96 \\
+longest-path & 10/10 & 12.71\,s & 99 \\
+maximal-clique & 10/10 & 21.31\,s & 98 \\
+maximum-leaf-spanning-tree & 10/10 & 266.99\,s & 87 \\
+minimum-cover & 10/10 & 13.15\,s & 99 \\
+set-packing & 10/10 & 5.05\,s & 100 \\
+solitaire & 7/10 & 1801.83\,s & 70 \\
+stacker-crane & 10/10 & 242.57\,s & 87 \\
+visit-all & 10/10 & 258.65\,s & 92 \\
+\midrule
+\textbf{Total} & 147/150 & 3562.00\,s & 1407 \\
+\botrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Performance of \textsc{ezsmt} across all problems.}
+\label{tab:performance-ezsmt}
+\begin{tabular}{lcrr}
+\toprule
+Problem & Suc. & Time & Score \\
+\midrule
+connected-maximum-density-still-life & 10/10 & 13.97\,s & 99 \\
+degree-bounded-connected-subgraph & 0/10 & 6000.00\,s & 0 \\
+dominating-set & 0/10 & 6000.00\,s & 0 \\
+fault-detection-in-directed-graphs & 0/10 & 6000.00\,s & 0 \\
+feedback-arc-set & 0/10 & 6000.00\,s & 0 \\
+knight-tour-with-holes & 10/10 & 779.82\,s & 74 \\
+longest-circuit & 0/10 & 6000.00\,s & 0 \\
+longest-path & 0/10 & 6000.00\,s & 0 \\
+maximal-clique & 0/10 & 6000.00\,s & 0 \\
+maximum-leaf-spanning-tree & 0/10 & 6000.00\,s & 0 \\
+minimum-cover & 0/10 & 6000.00\,s & 0 \\
+set-packing & 0/10 & 6000.00\,s & 0 \\
+solitaire & 7/10 & 1865.95\,s & 65 \\
+stacker-crane & 0/10 & 6000.00\,s & 0 \\
+visit-all & 8/10 & 1683.35\,s & 67 \\
+\midrule
+\textbf{Total} & 35/150 & 70343.09\,s & 306 \\
+\botrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Performance of \textsc{acyc2solver\,$_{\text{mip}}^{\text{fvs}}$} across all problems.}
+\label{tab:performance-acyc2solver_mip_fvs}
+\begin{tabular}{lcrr}
+\toprule
+Problem & Suc. & Time & Score \\
+\midrule
+connected-maximum-density-still-life & 10/10 & 7.85\,s & 99 \\
+degree-bounded-connected-subgraph & 10/10 & 38.97\,s & 97 \\
+dominating-set & 10/10 & 8.30\,s & 99 \\
+fault-detection-in-directed-graphs & 10/10 & 1.80\,s & 100 \\
+feedback-arc-set & 9/10 & 1557.96\,s & 69 \\
+knight-tour-with-holes & 10/10 & 430.20\,s & 80 \\
+longest-circuit & 10/10 & 6.70\,s & 100 \\
+longest-path & 10/10 & 5.78\,s & 100 \\
+maximal-clique & 10/10 & 10.98\,s & 99 \\
+maximum-leaf-spanning-tree & 10/10 & 217.29\,s & 88 \\
+minimum-cover & 10/10 & 4.76\,s & 100 \\
+set-packing & 10/10 & 1.70\,s & 100 \\
+solitaire & 7/10 & 1802.45\,s & 70 \\
+stacker-crane & 10/10 & 67.68\,s & 94 \\
+visit-all & 9/10 & 802.49\,s & 83 \\
+\midrule
+\textbf{Total} & 145/150 & 4964.91\,s & 1383 \\
+\botrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Performance of \textsc{acyc2solver\,$_{\text{mip}}^{\text{ve}}$} across all problems.}
+\label{tab:performance-acyc2solver_mip_ve}
+\begin{tabular}{lcrr}
+\toprule
+Problem & Suc. & Time & Score \\
+\midrule
+connected-maximum-density-still-life & 10/10 & 13.47\,s & 99 \\
+degree-bounded-connected-subgraph & 10/10 & 38.80\,s & 97 \\
+dominating-set & 10/10 & 7.93\,s & 99 \\
+fault-detection-in-directed-graphs & 10/10 & 1.70\,s & 100 \\
+feedback-arc-set & 8/10 & 1900.35\,s & 63 \\
+knight-tour-with-holes & 10/10 & 430.44\,s & 80 \\
+longest-circuit & 10/10 & 6.55\,s & 100 \\
+longest-path & 10/10 & 5.40\,s & 100 \\
+maximal-clique & 10/10 & 10.85\,s & 99 \\
+maximum-leaf-spanning-tree & 10/10 & 503.00\,s & 83 \\
+minimum-cover & 10/10 & 4.80\,s & 100 \\
+set-packing & 10/10 & 1.25\,s & 100 \\
+solitaire & 7/10 & 1802.31\,s & 70 \\
+stacker-crane & 10/10 & 592.32\,s & 78 \\
+visit-all & 10/10 & 627.74\,s & 88 \\
+\midrule
+\textbf{Total} & 145/150 & 5946.91\,s & 1361 \\
+\botrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Performance of \textsc{clingo\,\textsubscript{usc}} across all problems.}
+\label{tab:performance-clingo usc}
+\begin{tabular}{lcrr}
+\toprule
+Problem & Suc. & Time & Score \\
+\midrule
+connected-maximum-density-still-life & 10/10 & 0.68\,s & 100 \\
+degree-bounded-connected-subgraph & 8/10 & 1575.08\,s & 70 \\
+dominating-set & 10/10 & 1.19\,s & 100 \\
+fault-detection-in-directed-graphs & 6/10 & 2955.70\,s & 50 \\
+feedback-arc-set & 10/10 & 0.94\,s & 100 \\
+knight-tour-with-holes & 10/10 & 2.85\,s & 100 \\
+longest-circuit & 0/10 & 6000.00\,s & 0 \\
+longest-path & 7/10 & 2728.59\,s & 51 \\
+maximal-clique & 10/10 & 39.62\,s & 97 \\
+maximum-leaf-spanning-tree & 8/10 & 2278.39\,s & 60 \\
+minimum-cover & 10/10 & 3.45\,s & 100 \\
+set-packing & 10/10 & 0.36\,s & 100 \\
+solitaire & 7/10 & 1800.81\,s & 70 \\
+stacker-crane & 9/10 & 648.94\,s & 87 \\
+visit-all & 10/10 & 824.88\,s & 89 \\
+\midrule
+\textbf{Total} & 125/150 & 18861.48\,s & 1178 \\
+\botrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
 \centering
 \caption{Final standings based on total score (higher is better).}
 \label{tab:final-standings}
-\begin{tabular}{|c|l|r|}
-\hline
+\begin{tabular}{clr}
+\toprule
 Rank & Solver & Score \\
-\hline
+\midrule
 1 & \textsc{aspirena} & 1424 \\
-2 & \textsc{mingo} & 1302 \\
-3 & \textsc{dlv} & 1045 \\
-4 & \textsc{clingo} & 697 \\
-\hline
+2 & \textsc{maxmodels} & 1407 \\
+3 & \textsc{acyc2solver\,$_{\text{mip}}^{\text{fvs}}$} & 1383 \\
+4 & \textsc{acyc2solver\,$_{\text{mip}}^{\text{ve}}$} & 1361 \\
+5 & \textsc{mingo} & 1302 \\
+6 & \textsc{clingo\,\textsubscript{usc}} & 1178 \\
+7 & \textsc{dlv} & 1045 \\
+8 & \textsc{clingo\,\textsubscript{bnb}} & 697 \\
+9 & \textsc{ezsmt} & 306 \\
+\botrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Final standings based on the ASP Competition optimization score S2 (higher is better).}
+\label{tab:final-standings-s2}
+\begin{tabular}{clrr}
+\toprule
+Rank & Solver & S2 & Time \\
+\midrule
+1 & \textsc{aspirena} & 1490 & 2807.22\,s \\
+2 & \textsc{maxmodels} & 1470 & 3562.00\,s \\
+3 & \textsc{acyc2solver\,$_{\text{mip}}^{\text{fvs}}$} & 1450 & 4964.91\,s \\
+4 & \textsc{acyc2solver\,$_{\text{mip}}^{\text{ve}}$} & 1450 & 5946.91\,s \\
+5 & \textsc{mingo} & 1410 & 10461.65\,s \\
+6 & \textsc{clingo\,\textsubscript{usc}} & 1250 & 18861.48\,s \\
+7 & \textsc{dlv} & 1140 & 25949.55\,s \\
+8 & \textsc{clingo\,\textsubscript{bnb}} & 850 & 49831.25\,s \\
+9 & \textsc{ezsmt} & 350 & 70343.09\,s \\
+\botrule
 \end{tabular}
 \end{table}
 
