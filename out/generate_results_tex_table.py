@@ -49,7 +49,7 @@ with open(CSV_FILE, "r", newline="") as f:
 summary = defaultdict(lambda: {"solved": 0, "total_time": 0.0, "score": 0, "times": []})
 
 table_header = (
-    "\\begin{tabular}{l" + "|ccc"*len(SOLVERS) + "}\n"
+    "\\begin{tabular}{l" + "|crrr"*len(SOLVERS) + "}\n"
     "Problem"
 )
 for solver in SOLVERS:
@@ -59,7 +59,7 @@ table_header += "\\\\\n"
 # Subheader: for each solver, the three columns
 table_header += " "
 for _ in SOLVERS:
-    table_header += " & Suc. & Time & Score"
+    table_header += " & Suc. & Total time & $S_1$ & $S_2$"
 table_header += "\\\\\n\\hline\n"
 
 rows = []
@@ -70,11 +70,13 @@ for problem in PROBLEM_ORDER:
         times = problem_solver_results[problem][solver]
         num_solved = sum([1 for t in times if t < TIMEOUT])
         total_time = sum([min(t, TIMEOUT) for t in times])
-        score = score_original(num_solved, times)
+        score_1 = score_original(num_solved, times)
+        score_2 = score_optimal(num_solved, len(times))
         row.extend([
             f"{num_solved}/{len(times)}",
             f"{total_time:.2f}",
-            f"{score}"
+            f"{score_1}",
+            f"{score_2}"
         ])
         # Summing up for totals:
         summary[solver]["solved"] += num_solved
@@ -100,23 +102,26 @@ for solver in SOLVERS:
     print("\\begin{table}[htbp]")
     print("\\centering")
     print(f"\\caption{{Performance of \\textsc{{{LABELS[SOLVERS.index(solver)]}}} across all problems.}}")
-    print("\\label{tab:performance-" + solver + "}")
-    print("\\begin{tabular}{lcrr}")
+    print("\\label{tab:performance-" + solver.replace(" ", "_") + "}")
+    print("\\begin{tabular}{lcrrr}")
     print("\\toprule")
     print(
-        "Problem & Suc. & Time & Score \\\\"
+        "Problem & Suc. & Total time & $S_1$ & $S_2$ \\\\"
     )
     print("\\midrule")
     rows = []
-    total_score = 0.0
+    total_score_1 = 0.0
+    total_score_2 = 0.0
     for problem in PROBLEM_ORDER:
         times = problem_solver_results[problem][solver]
         num_solved = sum([1 for t in times if t < TIMEOUT])
         total_time = sum([min(t, TIMEOUT) for t in times])
-        score = score_original(num_solved, times)
-        total_score += score
+        score_1 = score_original(num_solved, times)
+        score_2 = score_optimal(num_solved, len(times))
+        total_score_1 += score_1
+        total_score_2 += score_2
         rows.append(
-            f"{problem} & {num_solved}/{len(times)} & {total_time:.2f}\\,s & {int(score)} \\\\"
+            f"{problem} & {num_solved}/{len(times)} & {total_time:.2f}\\,s & {int(score_1)} & {int(score_2)} \\\\"
         )
     # Add summary row
     total_instances = sum([PROBLEM_INSTANCE_COUNT[p] for p in PROBLEM_ORDER])
@@ -124,7 +129,7 @@ for solver in SOLVERS:
     total_time = summary[solver]["total_time"]
     rows.append("\\midrule")
     rows.append(
-        f"\\textbf{{Total}} & {num_solved}/{total_instances} & {total_time:.2f}\\,s & {int(total_score)} \\\\"
+        f"\\textbf{{Total}} & {num_solved}/{total_instances} & {total_time:.2f}\\,s & {int(total_score_1)} & {int(total_score_2)} \\\\"
     )
     for r in rows:
         print(r)
@@ -150,14 +155,14 @@ for solver in SOLVERS:
 standings.sort(key=lambda x: (-x[1], x[2]))
 print("\\begin{table}[htbp]")
 print("\\centering")
-print("\\caption{Final standings based on total score (higher is better).}")
-print("\\label{tab:final-standings}")
-print("\\begin{tabular}{clr}")
+print("\\caption{Final standings based on the total $S_1$ score (higher is better).}")
+print("\\label{tab:final-standings-s1}")
+print("\\begin{tabular}{clrr}")
 print("\\toprule")
-print("Rank & Solver & Score \\\\")
+print("Rank & Solver & Total $S_1$ & Total time \\\\")
 print("\\midrule")
 for idx, (solver, score, total_time) in enumerate(standings, start=1):
-    print(f"{idx} & \\textsc{{{LABELS[SOLVERS.index(solver)]}}} & {score} \\\\")
+    print(f"{idx} & \\textsc{{{LABELS[SOLVERS.index(solver)]}}} & {score} & {total_time:.2f}\\,s \\\\")
 print("\\botrule")
 print("\\end{tabular}")
 print("\\end{table}\n")
@@ -178,11 +183,11 @@ s2_standings.sort(key=lambda x: (-x[1], x[2]))
 
 print("\\begin{table}[htbp]")
 print("\\centering")
-print("\\caption{Final standings based on the ASP Competition optimization score S2 (higher is better).}")
+print("\\caption{Final standings based on the total $S_2$ score (higher is better).}")
 print("\\label{tab:final-standings-s2}")
 print("\\begin{tabular}{clrr}")
 print("\\toprule")
-print("Rank & Solver & S2 & Time \\\\")
+print("Rank & Solver & Total $S_2$ & Total time \\\\")
 print("\\midrule")
 for idx, (solver, score, total_time) in enumerate(s2_standings, start=1):
     print(f"{idx} & \\textsc{{{LABELS[SOLVERS.index(solver)]}}} & {score} & {total_time:.2f}\\,s \\\\")
