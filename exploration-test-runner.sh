@@ -62,6 +62,8 @@ for problem_filepath in "${problem_filepaths[@]}"; do
         kill_solver_processes
         "$PROGRAM" monitor.py -t 600 "acyc2solver_mip_ve_lp2normal2_gurobi.sh $problem_filepath $encoding_filepath"
         kill_solver_processes
+        "$PROGRAM" monitor.py -t 600 "acyc2solver_mip_ve_smodels_gurobi.sh $problem_filepath $encoding_filepath"
+        kill_solver_processes
         "$PROGRAM" monitor.py -t 600 "acyc2solver_mip_ve_smodels_lp2normal2_gurobi.sh $problem_filepath $encoding_filepath"
     else
         echo "File $problem_filepath or $encoding_filepath not found, skipping."
