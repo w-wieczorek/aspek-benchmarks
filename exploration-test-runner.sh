@@ -17,7 +17,7 @@ CUR_DIR="$(pwd)"
 
 
 for problem_filepath in "${problem_filepaths[@]}"; do
-    encoding_filepath="${problem_filepath%.lp}/encoding.lp"
+    encoding_filepath="$(dirname "$problem_filepath")/encoding.lp"
     if [ -f "$problem_filepath" ] && [ -f "$encoding_filepath" ]; then
         "$PROGRAM" monitor.py -t 600 "mingo.sh $problem_filepath $encoding_filepath"
         "$PROGRAM" monitor.py -t 600 "acyc2solver_mip_fvs.sh $problem_filepath $encoding_filepath"
