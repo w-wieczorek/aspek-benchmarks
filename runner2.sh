@@ -26,7 +26,7 @@ for folder in "${folders[@]}"; do
         problem_filepath="$folder/$problem"
         encoding_filepath="$folder/encoding.lp"
         if [ -f "$problem_filepath" ] && [ -f "$encoding_filepath" ]; then
-            "$PROGRAM" monitor.py -t 600 "dlv --mode=idlv --no-facts $problem_filepath $encoding_filepath | smodels -internal -nolookahead | lp2normal2 -ok -E | aspirena"
+            "$PROGRAM" monitor.py -t 600 "dlv --mode=idlv --no-facts $problem_filepath $encoding_filepath | lp2normal2 -ok -E | aspirena"
             kill_solver_processes
             sleep 5
             "$PROGRAM" monitor.py -t 600 "acyc2solver_mip_fvs_smodels_gurobi.sh $problem_filepath $encoding_filepath"
