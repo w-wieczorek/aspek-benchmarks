@@ -33,6 +33,10 @@ def extract_command_info(description: str) -> Optional[Tuple[str, str, str]]:
         solver = 'acyc2solver_mip_fvs'
     if solver == 'acyc2solver_mip_ve.sh':
         solver = 'acyc2solver_mip_ve'
+    if solver == 'acyc2solver_mip_ve_smodels_gurobi.sh':
+        solver = 'acyc2solver_mip_ve_smodels_gurobi'
+    if solver == 'acyc2solver_mip_fvs_smodels_gurobi.sh':
+        solver = 'acyc2solver_mip_fvs_smodels_gurobi'
     if solver == 'clingo' and '--opt-strategy=usc' in description:
         solver = 'clingo usc'
     elif solver == 'clingo':
@@ -86,7 +90,7 @@ def generate_summary(results: Dict[str, Dict[str, Dict[str, float]]]) -> str:
     output.append("EXECUTION TIME COMPARISON SUMMARY")
     output.append("=" * 47)
     
-    solvers = ['dlv', 'clingo bnb', 'aspirena', 'mingo', 'maxmodels', 'ezsmt', 'acyc2solver_mip_fvs', 'acyc2solver_mip_ve', 'clingo usc']
+    solvers = ['dlv', 'clingo bnb', 'aspirena', 'mingo', 'maxmodels', 'ezsmt', 'acyc2solver_mip_fvs', 'acyc2solver_mip_ve', 'clingo usc', 'acyc2solver_mip_ve_smodels_gurobi', 'acyc2solver_mip_fvs_smodels_gurobi']
     
     for problem_name in sorted(results.keys()):
         output.append(f"\nProblem: {problem_name}")
@@ -175,7 +179,7 @@ def generate_summary(results: Dict[str, Dict[str, Dict[str, float]]]) -> str:
     return "\n".join(output)
 
 def export_to_csv(results: Dict[str, Dict[str, Dict[str, float]]], csv_file: str):
-    solvers = ['dlv', 'clingo bnb', 'aspirena', 'mingo', 'maxmodels', 'ezsmt', 'acyc2solver_mip_fvs', 'acyc2solver_mip_ve', 'clingo usc']
+    solvers = ['dlv', 'clingo bnb', 'aspirena', 'mingo', 'maxmodels', 'ezsmt', 'acyc2solver_mip_fvs', 'acyc2solver_mip_ve', 'clingo usc', 'acyc2solver_mip_ve_smodels_gurobi', 'acyc2solver_mip_fvs_smodels_gurobi']
     with open(csv_file, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(['Problem', 'Dataset'] + solvers)
@@ -194,10 +198,12 @@ def export_to_csv(results: Dict[str, Dict[str, Dict[str, float]]], csv_file: str
 messages = []
 with open('obliczenia_page_1.json', 'r', encoding='utf-8') as f1, \
      open('obliczenia_page_2.json', 'r', encoding='utf-8') as f2, \
-     open('obliczenia_page_3.json', 'r', encoding='utf-8') as f3:
+     open('obliczenia_page_3.json', 'r', encoding='utf-8') as f3, \
+     open('obliczenia-page-4.json', 'r', encoding='utf-8') as f4:
     messages = json.load(f1)
     messages.extend(json.load(f2))
     messages.extend(json.load(f3))
+    messages.extend(json.load(f4))
 
 results = parse_messages(messages)
 if not results:

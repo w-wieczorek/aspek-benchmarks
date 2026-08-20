@@ -26,27 +26,9 @@ for folder in "${folders[@]}"; do
         problem_filepath="$folder/$problem"
         encoding_filepath="$folder/encoding.lp"
         if [ -f "$problem_filepath" ] && [ -f "$encoding_filepath" ]; then
-            #"$PROGRAM" monitor.py -t 600 "dlv --mode=idlv --no-facts $problem_filepath $encoding_filepath | lp2normal2 -ok -E | aspirena"
-            "$PROGRAM" monitor.py -t 600 "mingo.sh $problem_filepath $encoding_filepath"
+            "$PROGRAM" monitor.py -t 600 "dlv --mode=idlv --no-facts $problem_filepath $encoding_filepath | smodels -internal -nolookahead | lp2normal2 -ok -E | aspirena"
             kill_solver_processes
             sleep 5
-            "$PROGRAM" monitor.py -t 600 "clingo $problem_filepath $encoding_filepath"
-            kill_solver_processes
-            sleep 5
-            "$PROGRAM" monitor.py -t 600 "dlv $problem_filepath $encoding_filepath"
-            kill_solver_processes
-            sleep 5
-            "$PROGRAM" monitor.py -t 600 "maxmodels.sh $problem_filepath $encoding_filepath"
-            kill_solver_processes
-            sleep 5
-            "$PROGRAM" monitor.py -t 600 "clingo --opt-strategy=usc $problem_filepath $encoding_filepath"
-            kill_solver_processes
-            sleep 5
-            "$PROGRAM" monitor.py -t 600 "ezsmt -s cvc5 $problem_filepath $encoding_filepath"
-            kill_solver_processes
-            sleep 5
-            #"$PROGRAM" monitor.py -t 600 "acyc2solver_mip_fvs.sh $problem_filepath $encoding_filepath"
-            #"$PROGRAM" monitor.py -t 600 "acyc2solver_mip_ve.sh $problem_filepath $encoding_filepath"
         else
             echo "File $problem_filepath or $encoding_filepath not found, skipping."
         fi
