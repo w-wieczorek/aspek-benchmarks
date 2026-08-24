@@ -9,7 +9,7 @@ else
     exit 1
 fi
 
-folders=("connected-maximum-density-still-life" "degree-bounded-connected-subgraph" "dominating-set" "fault-detection-in-directed-graphs" "feedback-arc-set" "knight-tour-with-holes" "longest-circuit" "longest-path" "maximal-clique" "maximum-leaf-spanning-tree" "minimum-cover" "set-packing" "solitaire" "stacker-crane")
+folders=("visit-all")
 problems=("p1.lp" "p2.lp" "p3.lp" "p4.lp" "p5.lp" "p6.lp" "p7.lp" "p8.lp" "p9.lp" "p10.lp")
 CUR_DIR="$(pwd)"
 
@@ -26,7 +26,7 @@ for folder in "${folders[@]}"; do
         problem_filepath="$folder/$problem"
         encoding_filepath="$folder/encoding.lp"
         if [ -f "$problem_filepath" ] && [ -f "$encoding_filepath" ]; then
-            "$PROGRAM" monitor.py -t 600 "dlv --mode=idlv --no-facts $problem_filepath $encoding_filepath | smodels -internal -nolookahead | lp2normal2 -ok -E | aspirena"
+            "$PROGRAM" monitor.py -t 600 "gringo --output=smodels --warn=none $problem_filepath $encoding_filepath | smodels -internal -nolookahead | lp2normal2 -ok -E | aspirena"
             kill_solver_processes
             sleep 5
         else
