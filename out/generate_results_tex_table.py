@@ -3,8 +3,16 @@ from collections import defaultdict
 from math import log
 
 CSV_FILE = "results.csv"
-SOLVERS = ["dlv", "clingo bnb", "aspirena", "mingo", "maxmodels", "ezsmt", "acyc2solver_mip_fvs", "acyc2solver_mip_ve", "clingo usc", "acyc2solver_mip_ve_smodels_gurobi", "acyc2solver_mip_fvs_smodels_gurobi"]
-LABELS = ["dlv", "clingo\\,\\textsubscript{bnb}", "aspirena", "mingo", "maxmodels", "ezsmt", "acyc2solver\\,$_{\\text{mip}}^{\\text{fvs}}$", "acyc2solver\\,$_{\\text{mip}}^{\\text{ve}}$", "clingo\\,\\textsubscript{usc}", "acyc2solver\\,$_{\\text{mip}}^{\\text{ve}}$\\textsubscript{smodels}\\,\\textsubscript{gurobi}", "acyc2solver\\,$_{\\text{mip}}^{\\text{fvs}}$\\textsubscript{smodels}\\,\\textsubscript{gurobi}"]
+
+# before tuning acyc2solver
+# SOLVERS = ["dlv", "clingo bnb", "aspirena", "mingo", "maxmodels", "ezsmt", "acyc2solver_mip_fvs", "acyc2solver_mip_ve", "clingo usc", "acyc2solver_mip_ve_smodels_gurobi", "acyc2solver_mip_fvs_smodels_gurobi"]
+# LABELS = ["dlv", "clingo\\,\\textsubscript{bnb}", "aspirena", "mingo", "maxmodels", "ezsmt", "acyc2solver\\,$_{\\text{mip}}^{\\text{fvs}}$", "acyc2solver\\,$_{\\text{mip}}^{\\text{ve}}$", "clingo\\,\\textsubscript{usc}", "acyc2solver\\,$_{\\text{mip}}^{\\text{ve}}$\\textsubscript{smodels}\\,\\textsubscript{gurobi}", "acyc2solver\\,$_{\\text{mip}}^{\\text{fvs}}$\\textsubscript{smodels}\\,\\textsubscript{gurobi}"]
+
+# after tuning acyc2solver
+SOLVERS = ["dlv", "clingo bnb", "aspirena", "mingo", "maxmodels", "ezsmt", "clingo usc", "acyc2solver_mip_ve_smodels_gurobi", "acyc2solver_mip_fvs_smodels_gurobi"]
+LABELS = ["dlv", "clingo\\,\\textsubscript{bnb}", "aspirena", "mingo", "maxmodels", "ezsmt", "clingo\\,\\textsubscript{usc}", "acyc2solver\\,$_{\\text{mip}}^{\\text{fvs}}$", "acyc2solver\\,$_{\\text{mip}}^{\\text{ve}}$"]
+
+
 TIMEOUT = 600.0
 PROBLEM_ORDER = []
 PROBLEM_INSTANCE_COUNT = defaultdict(int)

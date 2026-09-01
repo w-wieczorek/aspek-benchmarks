@@ -4,22 +4,22 @@ EXECUTION TIME COMPARISON SUMMARY
 
 Problem: connected-maximum-density-still-life
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1          0.02s     0.02s     0.07s     0.17s     0.03s     0.22s     0.42s     0.42s     0.03s
-p2          0.03s     0.03s     0.12s     0.22s     0.07s     0.32s     0.47s     0.47s     0.03s
-p3          0.03s     0.03s     0.22s     0.22s     0.07s     0.47s     0.52s     0.52s     0.03s
-p4          0.07s     0.03s     0.32s     0.22s     0.07s     0.72s     0.58s     0.63s     0.07s
-p5          0.07s     0.03s     0.42s     0.27s     0.12s     1.02s     0.69s     0.84s     0.07s
-p6          0.07s     0.07s     0.62s     0.32s     0.12s     1.38s     0.79s     1.05s     0.07s
-p7          0.12s     0.07s     0.82s     0.42s     0.12s     1.73s     0.89s     1.43s     0.07s
-p8          0.12s     0.12s     1.07s     0.42s     0.17s     2.18s     1.01s     1.98s     0.07s
-p9          0.17s     0.12s     1.32s     0.52s     0.17s     2.69s     1.16s     2.56s     0.12s
-p10         0.17s     0.12s     1.62s     0.62s     0.22s     3.24s     1.32s     3.57s     0.12s
+p1          0.02s     0.02s     0.04s     0.17s     0.03s     0.22s     0.42s     0.42s     0.03s     0.07s     0.07s
+p2          0.03s     0.03s     0.07s     0.22s     0.07s     0.32s     0.47s     0.47s     0.02s     0.07s     0.07s
+p3          0.03s     0.03s     0.07s     0.22s     0.07s     0.52s     0.53s     0.58s     0.03s     0.07s     0.07s
+p4          0.07s     0.03s     0.12s     0.22s     0.07s     0.72s     0.58s     0.68s     0.03s     0.12s     0.12s
+p5          0.07s     0.03s     0.12s     0.27s     0.12s     1.02s     0.69s     0.84s     0.07s     0.12s     0.12s
+p6          0.07s     0.07s     0.12s     0.32s     0.12s     1.38s     0.81s     1.02s     0.07s     0.12s     0.12s
+p7          0.12s     0.07s     0.17s     0.42s     0.12s     1.73s     0.88s     1.43s     0.07s     0.12s     0.12s
+p8          0.12s     0.12s     0.17s     0.42s     0.17s     2.18s     1.00s     1.89s     0.07s     0.17s     0.17s
+p9          0.17s     0.12s     0.22s     0.52s     0.17s     2.69s     1.15s     2.58s     0.12s     0.17s     0.17s
+p10         0.17s     0.12s     0.27s     0.62s     0.17s     3.24s     1.32s     3.60s     0.12s     0.22s     0.22s
 
 Best times per dataset:
   p1: dlv (0.02s)
-  p2: dlv (0.03s)
+  p2: clingo usc (0.02s)
   p3: dlv (0.03s)
   p4: clingo bnb (0.03s)
   p5: clingo bnb (0.03s)
@@ -31,24 +31,24 @@ Best times per dataset:
 
 Problem: degree-bounded-connected-subgraph
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1         58.01s       T/O     0.47s     0.27s     8.39s       T/O     3.24s     3.22s    27.96s
-p2         10.81s       T/O     0.67s     0.22s     5.52s       T/O     3.48s     3.55s     4.15s
-p3            T/O       T/O     0.37s     0.27s    38.93s       T/O     3.65s     3.73s   295.33s
-p4         57.03s       T/O     0.47s     0.42s     6.16s       T/O     3.57s     3.52s    14.88s
-p5          3.42s       T/O     0.82s     0.17s     8.28s       T/O     3.73s     3.58s     1.88s
-p6         17.85s       T/O     1.07s     0.32s    12.25s       T/O     3.73s     4.33s     4.93s
-p7         11.69s       T/O     0.72s     0.27s     4.83s       T/O     4.53s     4.03s     5.93s
-p8            T/O       T/O     1.32s     0.27s    69.20s       T/O     4.33s     4.13s       T/O
-p9         75.92s       T/O     1.37s     0.17s    14.86s       T/O     4.28s     4.63s    20.02s
-p10           T/O       T/O     2.78s     0.22s   527.34s       T/O     4.43s     4.08s       T/O
+p1         58.01s       T/O     0.37s     0.27s     8.39s       T/O     3.24s     3.22s    27.75s     3.19s     3.18s
+p2         10.81s       T/O     0.62s     0.22s     5.52s       T/O     3.48s     3.55s     4.15s     3.55s     3.50s
+p3            T/O       T/O     0.32s     0.27s    38.93s       T/O     3.65s     3.73s   295.33s     3.55s     3.50s
+p4         57.03s       T/O     0.37s     0.42s     6.16s       T/O     3.57s     3.52s    14.88s     3.55s     3.50s
+p5          3.42s       T/O     0.72s     0.17s     8.28s       T/O     3.73s     3.58s     1.88s     3.55s     3.50s
+p6         17.85s       T/O     0.67s     0.32s    12.25s       T/O     3.73s     4.33s     4.93s     3.55s     3.50s
+p7         11.69s       T/O     0.52s     0.27s     4.83s       T/O     4.53s     4.03s     5.93s     3.90s     3.85s
+p8            T/O       T/O     4.03s     0.27s    69.20s       T/O     4.33s     4.13s       T/O     3.90s     3.85s
+p9         75.92s       T/O     1.17s     0.17s    14.86s       T/O     4.28s     4.63s    20.02s     3.95s     3.90s
+p10           T/O       T/O     3.07s     0.22s   527.34s       T/O     4.43s     4.08s       T/O     3.90s     3.90s
 
 Best times per dataset:
   p1: mingo (0.27s)
   p2: mingo (0.22s)
   p3: mingo (0.27s)
-  p4: mingo (0.42s)
+  p4: aspirena (0.37s)
   p5: mingo (0.17s)
   p6: mingo (0.32s)
   p7: mingo (0.27s)
@@ -58,18 +58,18 @@ Best times per dataset:
 
 Problem: dominating-set
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1          0.12s       T/O     1.34s     2.33s     1.57s       T/O     1.33s     1.28s     0.17s
-p2          0.02s       T/O     0.47s     1.32s     0.72s       N/A     0.83s     0.57s     0.02s
-p3          0.01s       T/O     0.77s     1.68s     0.82s       T/O     0.57s     0.62s     0.02s
-p4          0.02s       T/O     0.37s     1.68s     1.27s       T/O     0.67s     0.67s     0.02s
-p5          0.13s       T/O     1.39s     5.40s     1.42s       T/O     0.98s     0.88s     0.07s
-p6          0.04s       T/O     0.88s     1.49s     0.67s       T/O     0.42s     0.42s     0.02s
-p7          0.02s       T/O     0.18s     1.49s     0.62s       T/O     0.22s     0.22s     0.02s
-p8          0.02s       T/O     0.23s     1.59s     0.62s       T/O     0.32s     0.27s     0.01s
-p9          1.63s    41.37s     5.47s     5.15s     1.08s       T/O     1.38s     1.37s     0.52s
-p10         1.89s    35.76s     3.73s     5.96s     0.92s       T/O     1.58s     1.63s     0.32s
+p1          0.12s       T/O     0.87s     2.33s     1.57s       T/O     1.33s     1.28s     0.17s     0.57s     0.57s
+p2          0.02s       T/O     0.37s     1.32s     0.72s       T/O     0.83s     0.57s     0.02s     0.32s     0.32s
+p3          0.01s       T/O     0.42s     1.68s     0.82s       T/O     0.57s     0.62s     0.02s     0.17s     0.17s
+p4          0.02s       T/O     0.22s     1.68s     1.27s       T/O     0.67s     0.67s     0.02s     0.22s     0.22s
+p5          0.13s       T/O     0.62s     5.40s     1.42s       T/O     0.98s     0.88s     0.07s     0.47s     0.47s
+p6          0.04s       T/O     0.32s     1.49s     0.67s       T/O     0.42s     0.42s     0.02s     0.17s     0.17s
+p7          0.02s       T/O     0.12s     1.49s     0.62s       T/O     0.22s     0.22s     0.02s     0.12s     0.12s
+p8          0.02s       T/O     0.12s     1.59s     0.62s       T/O     0.32s     0.27s     0.01s     0.12s     0.12s
+p9          1.63s    41.37s     1.88s     5.15s     1.08s       T/O     1.38s     1.37s     0.52s     0.82s     0.82s
+p10         1.89s    35.76s     1.58s     5.96s     0.92s       T/O     1.58s     1.63s     0.32s     0.62s     0.62s
 
 Best times per dataset:
   p1: dlv (0.12s)
@@ -85,18 +85,18 @@ Best times per dataset:
 
 Problem: fault-detection-in-directed-graphs
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1          0.17s       T/O     0.48s     0.48s     0.87s       T/O     0.17s     0.12s     0.03s
-p2            T/O       T/O     0.58s     0.58s     0.82s       T/O     0.22s     0.17s   367.41s
-p3            T/O       T/O     0.74s     0.58s     0.77s       T/O     0.22s     0.17s       T/O
-p4        227.32s       T/O     0.48s     0.48s     0.82s       T/O     0.17s     0.17s    75.02s
-p5          0.07s   351.84s     0.59s     0.52s     1.28s       T/O     0.17s     0.17s     0.02s
-p6            T/O       T/O     0.83s     0.53s     0.87s       T/O     0.17s     0.17s       T/O
-p7            T/O       T/O     1.24s     0.68s     0.97s       T/O     0.17s     0.22s       T/O
-p8            T/O       T/O     0.94s     0.53s     0.87s       T/O     0.17s     0.17s       T/O
-p9            T/O       T/O     0.38s     0.53s     1.37s       T/O     0.17s     0.17s   113.10s
-p10         1.29s       T/O     0.79s     0.73s     0.77s       T/O     0.17s     0.17s     0.12s
+p1          0.17s       T/O     0.27s     0.48s     0.87s       T/O     0.17s     0.12s     0.03s     0.17s     0.17s
+p2            T/O       T/O     0.32s     0.58s     0.82s       T/O     0.22s     0.17s   367.41s     0.22s     0.22s
+p3            T/O       T/O     0.32s     0.58s     0.77s       T/O     0.22s     0.17s       T/O     0.22s     0.22s
+p4        227.32s       T/O     0.27s     0.48s     0.82s       T/O     0.17s     0.17s    75.02s     0.17s     0.17s
+p5          0.07s   351.84s     0.27s     0.52s     1.28s       T/O     0.17s     0.17s     0.02s     0.22s     0.22s
+p6            T/O       T/O     0.32s     0.53s     0.87s       T/O     0.17s     0.17s       T/O     0.22s     0.22s
+p7            T/O       T/O     0.37s     0.68s     0.97s       T/O     0.17s     0.22s       T/O     0.27s     0.27s
+p8            T/O       T/O     0.32s     0.53s     0.87s       T/O     0.17s     0.17s       T/O     0.22s     0.22s
+p9            T/O       T/O     0.22s     0.53s     1.37s       T/O     0.17s     0.17s   113.10s     0.17s     0.17s
+p10         1.29s       T/O     0.27s     0.73s     0.77s       T/O     0.17s     0.17s     0.12s     0.22s     0.22s
 
 Best times per dataset:
   p1: clingo usc (0.03s)
@@ -112,18 +112,18 @@ Best times per dataset:
 
 Problem: feedback-arc-set
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1          0.07s     5.73s     2.87s    43.64s     7.46s       T/O    28.05s    25.24s     0.03s
-p2          8.87s       T/O    80.16s       T/O    30.20s       T/O   553.22s       T/O     0.42s
-p3          0.38s   589.89s    17.67s   152.94s    14.86s       T/O    25.56s    25.38s     0.03s
-p4          0.17s     0.07s     2.70s     8.82s     2.97s       T/O    17.26s    17.36s     0.03s
-p5          0.28s       T/O    10.88s    47.67s     5.47s       T/O    15.95s    20.35s     0.07s
-p6          0.38s       T/O    35.47s       T/O     7.63s       T/O    78.24s    72.01s     0.07s
-p7          0.53s       T/O    27.57s    31.13s     8.43s       T/O    49.05s    27.83s     0.03s
-p8          0.53s       T/O    35.63s   486.48s    12.68s       T/O    51.06s    56.27s     0.07s
-p9          0.67s       T/O    95.38s       T/O    11.81s       T/O   139.57s   455.91s     0.07s
-p10         1.69s       T/O   366.53s       T/O    37.66s       T/O       T/O       T/O     0.12s
+p1          0.07s     5.73s     2.73s    43.64s     7.46s       T/O    28.05s    25.24s     0.03s    16.80s    15.35s
+p2          8.87s       T/O    53.05s       T/O    30.20s       T/O   553.22s       T/O     0.42s   116.42s    71.22s
+p3          0.38s   589.89s     5.72s   152.94s    14.86s       T/O    25.56s    25.38s     0.03s    19.53s    17.37s
+p4          0.17s     0.07s     0.77s     8.82s     2.97s       T/O    17.26s    17.36s     0.03s    17.31s    17.02s
+p5          0.28s       T/O     3.70s    47.67s     5.47s       T/O    15.95s    20.35s     0.07s    11.78s     9.35s
+p6          0.38s       T/O     6.33s       T/O     7.63s       T/O    78.24s    72.01s     0.07s    17.58s    14.10s
+p7          0.53s       T/O    10.70s    31.13s     8.43s       T/O    49.05s    27.83s     0.03s    17.43s    12.31s
+p8          0.53s       T/O     9.20s   486.48s    12.68s       T/O    51.06s    56.27s     0.07s    24.39s    15.64s
+p9          0.67s       T/O    25.56s       T/O    11.81s       T/O   139.57s   455.91s     0.07s    37.94s    23.50s
+p10         1.69s       T/O    95.56s       T/O    37.66s       T/O       T/O       T/O     0.12s   133.29s    52.68s
 
 Best times per dataset:
   p1: clingo usc (0.03s)
@@ -139,18 +139,18 @@ Best times per dataset:
 
 Problem: knight-tour-with-holes
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1          6.83s     1.70s    36.38s   217.43s     3.63s    79.14s    48.59s    47.57s     0.32s
-p2          6.12s     1.61s    36.69s   203.39s     3.53s    77.37s    40.17s    40.17s     0.37s
-p3          7.69s     1.56s    35.49s   230.57s     3.40s    79.00s    42.98s    43.14s     0.27s
-p4          6.62s     1.64s    41.43s   231.26s     3.09s    75.90s    40.26s    40.26s     0.27s
-p5          6.22s     1.55s    36.49s   223.73s     3.45s    79.96s    47.18s    47.17s     0.27s
-p6         10.09s     2.52s    35.82s       T/O     3.28s    77.78s    42.02s    42.44s     0.27s
-p7          6.33s     2.05s    50.24s   331.50s     3.28s    76.01s    42.32s    42.27s     0.27s
-p8          6.48s     1.70s    35.28s   250.50s     3.29s    76.93s    39.95s    39.98s     0.27s
-p9          5.15s     1.39s    35.51s   238.35s     3.14s    78.22s    42.71s    43.38s     0.27s
-p10         5.72s     1.03s    27.92s   240.84s     3.23s    79.51s    44.02s    44.06s     0.27s
+p1          6.83s     1.70s    11.72s   217.43s     3.63s    79.14s    48.59s    47.57s     0.32s     9.92s     9.97s
+p2          6.12s     1.61s     5.97s   203.39s     3.53s    77.37s    40.17s    40.17s     0.37s     9.10s     9.07s
+p3          7.69s     1.56s     6.06s   230.57s     3.40s    79.00s    42.98s    43.14s     0.27s     9.73s     9.72s
+p4          6.62s     1.64s    12.83s   231.26s     3.09s    75.90s    40.26s    40.26s     0.27s     8.77s     8.77s
+p5          6.22s     1.55s     6.01s   223.73s     3.45s    79.96s    47.18s    47.17s     0.27s     9.65s     9.68s
+p6         10.09s     2.52s     5.93s       T/O     3.28s    77.78s    42.02s    42.44s     0.27s     9.24s     9.27s
+p7          6.33s     2.05s    12.69s   331.50s     3.28s    76.01s    42.32s    42.27s     0.27s     9.19s     9.22s
+p8          6.48s     1.70s     5.96s   250.50s     3.29s    76.93s    39.95s    39.98s     0.27s     8.89s     8.92s
+p9          5.15s     1.39s    14.48s   238.35s     3.14s    78.22s    42.71s    43.38s     0.27s     8.96s     8.97s
+p10         5.72s     1.03s     6.06s   240.84s     3.23s    79.51s    44.02s    44.06s     0.27s     9.47s     9.46s
 
 Best times per dataset:
   p1: clingo usc (0.32s)
@@ -166,153 +166,153 @@ Best times per dataset:
 
 Problem: longest-circuit
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1            T/O   330.27s     0.34s     2.49s     0.62s       T/O     0.52s     0.52s       T/O
-p2            T/O   168.68s     0.46s     2.66s     1.33s       T/O     0.62s     0.62s       T/O
-p3            T/O       T/O     0.59s     2.65s     1.83s       T/O     0.57s     0.62s       T/O
-p4            T/O       T/O     0.54s     4.21s     0.82s       T/O     0.57s     0.57s       T/O
-p5            T/O       T/O     1.83s     3.81s     2.32s       T/O     0.72s     0.67s       T/O
-p6            T/O       T/O     0.81s     3.71s    15.36s       T/O     0.72s     0.57s       T/O
-p7            T/O       T/O     0.80s     4.32s     6.78s       T/O     0.67s     0.72s       T/O
-p8            T/O       T/O     1.67s     3.61s    14.55s       T/O     0.82s     0.77s       T/O
-p9            T/O   301.30s     0.55s     3.57s     4.18s       T/O     0.67s     0.72s       T/O
-p10           T/O       T/O     0.80s     3.07s     3.42s       T/O     0.82s     0.77s       T/O
+p1            T/O   330.27s     0.12s     2.49s     0.62s       T/O     0.52s     0.52s       T/O     0.47s     0.52s
+p2            T/O   168.68s     0.17s     2.66s     1.33s       T/O     0.62s     0.62s       T/O     0.52s     0.57s
+p3            T/O       T/O     0.22s     2.65s     1.83s       T/O     0.57s     0.62s       T/O     0.57s     0.57s
+p4            T/O       T/O     0.22s     4.21s     0.82s       T/O     0.57s     0.57s       T/O     0.52s     0.52s
+p5            T/O       T/O     0.37s     3.81s     2.32s       T/O     0.72s     0.67s       T/O     0.77s     0.67s
+p6            T/O       T/O     0.22s     3.71s    15.36s       T/O     0.72s     0.57s       T/O     0.62s     0.57s
+p7            T/O       T/O     0.22s     4.32s     6.78s       T/O     0.67s     0.72s       T/O     0.62s     0.57s
+p8            T/O       T/O     0.37s     3.61s    14.55s       T/O     0.82s     0.77s       T/O     0.77s     0.67s
+p9            T/O   301.30s     0.17s     3.57s     4.18s       T/O     0.67s     0.72s       T/O     0.57s     0.57s
+p10           T/O       T/O     0.22s     3.07s     3.42s       T/O     0.82s     0.77s       T/O     0.62s     0.57s
 
 Best times per dataset:
-  p1: aspirena (0.34s)
-  p2: aspirena (0.46s)
-  p3: acyc2solver_mip_fvs (0.57s)
-  p4: aspirena (0.54s)
-  p5: acyc2solver_mip_ve (0.67s)
-  p6: acyc2solver_mip_ve (0.57s)
-  p7: acyc2solver_mip_fvs (0.67s)
-  p8: acyc2solver_mip_ve (0.77s)
-  p9: aspirena (0.55s)
-  p10: acyc2solver_mip_ve (0.77s)
+  p1: aspirena (0.12s)
+  p2: aspirena (0.17s)
+  p3: aspirena (0.22s)
+  p4: aspirena (0.22s)
+  p5: aspirena (0.37s)
+  p6: aspirena (0.22s)
+  p7: aspirena (0.22s)
+  p8: aspirena (0.37s)
+  p9: aspirena (0.17s)
+  p10: aspirena (0.22s)
 
 Problem: longest-path
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1            T/O   561.84s     0.38s     2.30s     0.77s       T/O     0.62s     0.57s    17.01s
-p2            T/O   287.65s     0.35s     1.37s     1.27s       T/O     0.47s     0.47s       T/O
-p3        180.15s   381.82s     0.32s     0.43s     1.38s       T/O     0.47s     0.47s    18.97s
-p4            T/O       T/O     0.45s     3.46s     1.52s       T/O     0.53s     0.57s   176.56s
-p5            T/O   369.00s     0.39s     1.92s     0.87s       T/O     0.47s     0.47s       T/O
-p6            T/O   309.15s     0.50s     3.51s     1.08s       T/O     0.67s     0.67s   368.74s
-p7        103.68s   311.18s     0.56s     3.21s     1.58s       T/O     0.83s     0.57s    87.79s
-p8            T/O   361.20s     0.31s     5.08s     1.18s       T/O     0.62s     0.47s       T/O
-p9            T/O   242.36s     0.39s     4.48s     0.97s       T/O     0.63s     0.67s    17.70s
-p10           T/O   501.62s     0.25s     1.97s     2.09s       T/O     0.47s     0.47s   241.82s
+p1            T/O   561.84s     0.12s     2.30s     0.77s       T/O     0.62s     0.57s    17.01s     0.47s     0.47s
+p2            T/O   287.65s     0.12s     1.37s     1.27s       T/O     0.47s     0.47s       T/O     0.47s     0.47s
+p3        180.15s   381.82s     0.12s     0.43s     1.38s       T/O     0.47s     0.47s    18.97s     0.47s     0.47s
+p4            T/O       T/O     0.17s     3.46s     1.52s       T/O     0.53s     0.57s   176.56s     0.57s     0.52s
+p5            T/O   369.00s     0.12s     1.92s     0.87s       T/O     0.47s     0.47s       T/O     0.47s     0.47s
+p6            T/O   309.15s     0.17s     3.51s     1.08s       T/O     0.67s     0.67s   368.74s     0.52s     0.52s
+p7        103.68s   311.18s     0.12s     3.21s     1.58s       T/O     0.83s     0.57s    87.79s     0.52s     0.52s
+p8            T/O   361.20s     0.12s     5.08s     1.18s       T/O     0.62s     0.47s       T/O     0.47s     0.47s
+p9            T/O   242.36s     0.12s     4.48s     0.97s       T/O     0.63s     0.67s    17.70s     0.47s     0.47s
+p10           T/O   501.62s     0.07s     1.97s     2.09s       T/O     0.47s     0.47s   241.82s     0.47s     0.47s
 
 Best times per dataset:
-  p1: aspirena (0.38s)
-  p2: aspirena (0.35s)
-  p3: aspirena (0.32s)
-  p4: aspirena (0.45s)
-  p5: aspirena (0.39s)
-  p6: aspirena (0.50s)
-  p7: aspirena (0.56s)
-  p8: aspirena (0.31s)
-  p9: aspirena (0.39s)
-  p10: aspirena (0.25s)
+  p1: aspirena (0.12s)
+  p2: aspirena (0.12s)
+  p3: aspirena (0.12s)
+  p4: aspirena (0.17s)
+  p5: aspirena (0.12s)
+  p6: aspirena (0.17s)
+  p7: aspirena (0.12s)
+  p8: aspirena (0.12s)
+  p9: aspirena (0.12s)
+  p10: aspirena (0.07s)
 
 Problem: maximal-clique
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1         69.92s       T/O     3.72s     6.47s     2.02s       T/O     1.22s     1.22s     2.44s
-p2         62.38s       T/O     2.86s     4.76s     0.87s       T/O     0.83s     0.83s     1.72s
-p3        121.30s       T/O     3.70s     6.32s     1.83s       T/O     1.03s     1.10s     1.93s
-p4            T/O       T/O     4.82s     7.12s     2.12s       T/O     1.29s     1.28s     5.08s
-p5        107.62s       T/O     3.26s     5.05s     2.32s       T/O     0.93s     0.89s     1.87s
-p6        327.71s       T/O     3.86s     5.31s     2.28s       T/O     1.00s     0.89s    10.74s
-p7        298.79s       T/O     3.15s     5.46s     2.38s       T/O     0.93s     0.89s     3.34s
-p8        234.23s       T/O     4.93s     8.28s     2.34s       T/O     1.53s     1.53s     6.22s
-p9        120.02s       T/O     3.96s     6.41s     2.57s       T/O     1.18s     1.14s     2.98s
-p10       164.15s       T/O     3.76s     7.13s     2.58s       T/O     1.04s     1.08s     3.30s
+p1         69.92s       T/O     1.02s     6.47s     2.02s       T/O     1.22s     1.22s     2.44s     1.14s     1.13s
+p2         62.38s       T/O     0.77s     4.76s     0.87s       T/O     0.83s     0.83s     1.72s     0.87s     0.88s
+p3        121.30s       T/O     1.02s     6.32s     1.83s       T/O     1.03s     1.10s     1.93s     1.08s     1.13s
+p4            T/O       T/O     1.07s     7.12s     2.12s       T/O     1.29s     1.28s     5.08s     1.18s     1.18s
+p5        107.62s       T/O     0.92s     5.05s     2.32s       T/O     0.93s     0.89s     1.87s     1.02s     1.03s
+p6        327.71s       T/O     1.27s     5.31s     2.28s       T/O     1.00s     0.89s    10.74s     1.14s     1.14s
+p7        298.79s       T/O     0.92s     5.46s     2.38s       T/O     0.93s     0.89s     3.34s     1.03s     1.03s
+p8        234.23s       T/O     1.07s     8.28s     2.34s       T/O     1.53s     1.53s     6.22s     1.13s     1.13s
+p9        120.02s       T/O     1.18s     6.41s     2.57s       T/O     1.18s     1.14s     2.98s     1.18s     1.18s
+p10       164.15s       T/O     1.13s     7.13s     2.58s       T/O     1.04s     1.08s     3.30s     1.13s     1.18s
 
 Best times per dataset:
-  p1: acyc2solver_mip_fvs (1.22s)
-  p2: acyc2solver_mip_fvs (0.83s)
-  p3: acyc2solver_mip_fvs (1.03s)
-  p4: acyc2solver_mip_ve (1.28s)
+  p1: aspirena (1.02s)
+  p2: aspirena (0.77s)
+  p3: aspirena (1.02s)
+  p4: aspirena (1.07s)
   p5: acyc2solver_mip_ve (0.89s)
   p6: acyc2solver_mip_ve (0.89s)
   p7: acyc2solver_mip_ve (0.89s)
-  p8: acyc2solver_mip_fvs (1.53s)
+  p8: aspirena (1.07s)
   p9: acyc2solver_mip_ve (1.14s)
   p10: acyc2solver_mip_fvs (1.04s)
 
 Problem: maximum-leaf-spanning-tree
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1         14.35s    60.19s     1.27s     4.84s    16.58s       T/O     7.87s    10.59s    22.56s
-p2        187.59s    82.49s     0.52s     3.90s    28.46s       T/O     6.66s    13.13s    60.77s
-p3        408.93s   380.94s     0.62s     6.50s    41.48s       T/O    13.63s    11.53s     7.98s
-p4        392.81s   490.59s     1.69s    15.86s    71.22s       T/O    10.38s    16.79s   533.44s
-p5            T/O       T/O     0.89s    13.15s    75.59s       T/O    14.75s    18.78s   191.09s
-p6         23.68s    19.41s     3.87s    21.56s     3.17s       T/O    13.80s    15.20s     1.87s
-p7        148.60s   130.50s     7.86s    13.54s     4.48s       T/O    19.52s    25.81s   176.72s
-p8            T/O   516.33s     4.78s    31.48s     4.58s       T/O    19.24s    43.30s    83.96s
-p9        475.43s   246.82s    24.36s    68.17s    13.25s       T/O    69.57s   204.25s       T/O
-p10           T/O   272.38s     8.94s    14.32s     8.18s       T/O    41.87s   143.62s       T/O
+p1         14.35s    60.19s     0.87s     4.84s    16.58s       T/O     7.87s    10.59s    22.56s     1.77s     0.72s
+p2        187.59s    82.49s     0.57s     3.90s    28.46s       T/O     6.66s    13.13s    60.77s     0.87s     0.72s
+p3        408.93s   380.94s     1.12s     6.50s    41.48s       T/O    13.63s    11.53s     7.98s     1.52s     1.17s
+p4        392.81s   490.59s     1.57s    15.86s    71.22s       T/O    10.38s    16.79s   533.44s     0.97s     0.77s
+p5            T/O       T/O     1.12s    13.15s    75.59s       T/O    14.75s    18.78s   191.09s     1.62s     0.82s
+p6         23.68s    19.41s     1.72s    21.56s     3.17s       T/O    13.80s    15.20s     1.87s     2.57s     2.48s
+p7        148.60s   130.50s     2.87s    13.54s     4.48s       T/O    19.52s    25.81s   176.72s     4.53s     3.23s
+p8            T/O   516.33s     1.92s    31.48s     4.58s       T/O    19.24s    43.30s    83.96s     3.73s     2.68s
+p9        475.43s   246.82s     5.18s    68.17s    13.25s       T/O    69.57s   204.25s       T/O    10.49s     6.58s
+p10           T/O   272.38s     2.52s    14.32s     8.18s       T/O    41.87s   143.62s       T/O     4.73s     4.89s
 
 Best times per dataset:
-  p1: aspirena (1.27s)
-  p2: aspirena (0.52s)
-  p3: aspirena (0.62s)
-  p4: aspirena (1.69s)
-  p5: aspirena (0.89s)
-  p6: clingo usc (1.87s)
-  p7: maxmodels (4.48s)
-  p8: maxmodels (4.58s)
-  p9: maxmodels (13.25s)
-  p10: maxmodels (8.18s)
+  p1: acyc2solver_mip_fvs_smodels_gurobi (0.72s)
+  p2: aspirena (0.57s)
+  p3: aspirena (1.12s)
+  p4: acyc2solver_mip_fvs_smodels_gurobi (0.77s)
+  p5: acyc2solver_mip_fvs_smodels_gurobi (0.82s)
+  p6: aspirena (1.72s)
+  p7: aspirena (2.87s)
+  p8: aspirena (1.92s)
+  p9: aspirena (5.18s)
+  p10: aspirena (2.52s)
 
 Problem: minimum-cover
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1          1.29s   551.00s     0.75s     2.11s     1.07s       T/O     0.32s     0.32s     0.17s
-p2          5.66s   556.84s     1.35s     3.35s     2.22s       T/O     0.67s     0.52s     0.72s
-p3          0.14s    47.79s     1.14s     2.61s     1.42s       T/O     0.52s     0.47s     0.17s
-p4          0.94s   258.04s     0.80s     5.07s     1.27s       T/O     0.88s     0.97s     0.17s
-p5          0.24s    83.51s     0.50s     2.76s     1.17s       T/O     0.32s     0.32s     0.07s
-p6          1.05s   346.81s     1.82s     2.16s     0.97s       T/O     0.32s     0.32s     0.22s
-p7         17.06s       T/O     1.51s     3.00s     1.67s       T/O     0.37s     0.42s     0.77s
-p8          0.44s       T/O     0.82s     4.57s     0.87s       T/O     0.47s     0.57s     0.07s
-p9          8.43s       T/O     0.95s     3.71s     0.97s       T/O     0.62s     0.57s     0.42s
-p10         8.28s       T/O     1.70s     3.47s     1.52s       T/O     0.27s     0.32s     0.67s
+p1          1.29s   551.00s     0.32s     2.11s     1.07s       T/O     0.32s     0.32s     0.17s     0.12s     0.12s
+p2          5.66s   556.84s     0.42s     3.35s     2.22s       T/O     0.67s     0.52s     0.72s     0.22s     0.22s
+p3          0.14s    47.79s     0.32s     2.61s     1.42s       T/O     0.52s     0.47s     0.17s     0.17s     0.17s
+p4          0.94s   258.04s     0.27s     5.07s     1.27s       T/O     0.88s     0.97s     0.17s     0.12s     0.12s
+p5          0.24s    83.51s     0.17s     2.76s     1.17s       T/O     0.32s     0.32s     0.07s     0.12s     0.12s
+p6          1.05s   346.81s     0.47s     2.16s     0.97s       T/O     0.32s     0.32s     0.22s     0.17s     0.17s
+p7         17.06s       T/O     0.37s     3.00s     1.67s       T/O     0.37s     0.42s     0.77s     0.17s     0.17s
+p8          0.44s       T/O     0.32s     4.57s     0.87s       T/O     0.47s     0.57s     0.07s     0.17s     0.17s
+p9          8.43s       T/O     0.27s     3.71s     0.97s       T/O     0.62s     0.57s     0.42s     0.17s     0.17s
+p10         8.28s       T/O     0.32s     3.47s     1.52s       T/O     0.27s     0.32s     0.67s     0.22s     0.22s
 
 Best times per dataset:
-  p1: clingo usc (0.17s)
-  p2: acyc2solver_mip_ve (0.52s)
+  p1: acyc2solver_mip_ve_smodels_gurobi (0.12s)
+  p2: acyc2solver_mip_ve_smodels_gurobi (0.22s)
   p3: dlv (0.14s)
-  p4: clingo usc (0.17s)
+  p4: acyc2solver_mip_ve_smodels_gurobi (0.12s)
   p5: clingo usc (0.07s)
-  p6: clingo usc (0.22s)
-  p7: acyc2solver_mip_fvs (0.37s)
+  p6: acyc2solver_mip_ve_smodels_gurobi (0.17s)
+  p7: acyc2solver_mip_ve_smodels_gurobi (0.17s)
   p8: clingo usc (0.07s)
-  p9: clingo usc (0.42s)
-  p10: acyc2solver_mip_fvs (0.27s)
+  p9: acyc2solver_mip_ve_smodels_gurobi (0.17s)
+  p10: acyc2solver_mip_ve_smodels_gurobi (0.22s)
 
 Problem: set-packing
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1          0.03s   114.97s     0.14s     1.41s     0.57s       T/O     0.22s     0.27s     0.02s
-p2          0.02s   262.44s     0.08s     0.39s     0.52s       T/O     0.12s     0.07s     0.01s
-p3          0.02s       T/O     0.14s     0.43s     0.52s       T/O     0.12s     0.07s     0.02s
-p4          0.04s       T/O     0.15s     2.01s     0.52s       T/O     0.07s     0.07s     0.02s
-p5          0.03s   138.40s     0.09s     0.49s     0.77s       T/O     0.12s     0.07s     0.02s
-p6          0.03s       T/O     0.14s     0.59s     0.07s       T/O     0.12s     0.07s     0.02s
-p7          0.03s       T/O     0.10s     0.49s     0.67s       T/O     0.12s     0.07s     0.03s
-p8          0.44s   237.46s     0.20s     2.15s     0.82s       T/O     0.57s     0.42s     0.17s
-p9          0.13s   105.10s     0.09s     0.43s     0.52s       T/O     0.12s     0.07s     0.03s
-p10         0.03s   279.55s     0.09s     0.54s     0.07s       T/O     0.12s     0.07s     0.02s
+p1          0.03s   114.97s     0.07s     1.41s     0.57s       T/O     0.22s     0.27s     0.02s     0.12s     0.12s
+p2          0.02s   262.44s     0.07s     0.39s     0.52s       T/O     0.12s     0.07s     0.01s     0.12s     0.12s
+p3          0.02s       T/O     0.07s     0.43s     0.52s       T/O     0.12s     0.07s     0.02s     0.12s     0.12s
+p4          0.04s       T/O     0.07s     2.01s     0.52s       T/O     0.07s     0.07s     0.02s     0.12s     0.12s
+p5          0.03s   138.40s     0.07s     0.49s     0.77s       T/O     0.12s     0.07s     0.02s     0.12s     0.12s
+p6          0.03s       T/O     0.07s     0.59s     0.07s       T/O     0.12s     0.07s     0.02s     0.12s     0.12s
+p7          0.03s       T/O     0.07s     0.49s     0.67s       T/O     0.12s     0.07s     0.03s     0.12s     0.12s
+p8          0.44s   237.46s     0.12s     2.15s     0.82s       T/O     0.57s     0.42s     0.17s     0.12s     0.12s
+p9          0.13s   105.10s     0.07s     0.43s     0.52s       T/O     0.12s     0.07s     0.03s     0.12s     0.12s
+p10         0.03s   279.55s     0.07s     0.54s     0.07s       T/O     0.12s     0.07s     0.02s     0.12s     0.12s
 
 Best times per dataset:
   p1: clingo usc (0.02s)
@@ -322,90 +322,90 @@ Best times per dataset:
   p5: clingo usc (0.02s)
   p6: clingo usc (0.02s)
   p7: dlv (0.03s)
-  p8: clingo usc (0.17s)
+  p8: aspirena (0.12s)
   p9: clingo usc (0.03s)
   p10: clingo usc (0.02s)
 
 Problem: solitaire
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1          0.34s     0.19s     4.02s     0.85s     0.17s     4.93s     0.27s     0.27s     0.07s
-p2          0.23s     0.13s     2.56s     0.75s     0.07s    13.24s     0.22s     0.17s     0.07s
-p3            T/O       T/O   365.97s       T/O       T/O       T/O       T/O       T/O       T/O
-p4          0.41s     0.30s     6.66s     1.56s     0.43s     4.24s     0.27s     0.27s     0.17s
-p5          0.35s     0.23s     3.79s     1.25s     0.07s    14.10s     0.22s     0.22s     0.07s
-p6            T/O       T/O   315.41s       T/O       T/O       T/O       T/O       T/O       T/O
-p7          0.51s     0.35s     6.85s     1.65s     0.43s     6.70s     0.68s     0.63s     0.17s
-p8          0.39s     0.24s     4.85s     1.04s     0.17s    17.05s     0.42s     0.38s     0.13s
-p9            T/O       T/O       T/O       T/O       T/O       T/O       T/O       T/O       T/O
-p10         0.61s     0.37s     7.68s     1.93s     0.49s     5.69s     0.37s     0.37s     0.13s
+p1          0.34s     0.19s     0.22s     0.85s     0.17s     4.93s     0.27s     0.27s     0.07s     0.17s     0.17s
+p2          0.23s     0.13s     0.07s     0.75s     0.07s    13.24s     0.22s     0.17s     0.07s     0.12s     0.12s
+p3            T/O       T/O    56.69s       T/O       T/O       T/O       T/O       T/O       T/O    62.75s    62.80s
+p4          0.41s     0.30s     0.22s     1.56s     0.43s     4.24s     0.27s     0.27s     0.17s     0.17s     0.17s
+p5          0.35s     0.23s     0.07s     1.25s     0.07s    14.10s     0.22s     0.22s     0.07s     0.12s     0.12s
+p6            T/O       T/O    71.98s       T/O       T/O       T/O       T/O       T/O       T/O    70.15s    70.10s
+p7          0.51s     0.35s     0.22s     1.65s     0.43s     6.70s     0.68s     0.63s     0.17s     0.17s     0.17s
+p8          0.39s     0.24s     0.07s     1.04s     0.17s    17.05s     0.42s     0.38s     0.13s     0.12s     0.12s
+p9            T/O       T/O   121.33s       T/O       T/O       T/O       T/O       T/O       T/O   137.17s   137.11s
+p10         0.61s     0.37s     0.22s     1.93s     0.49s     5.69s     0.37s     0.37s     0.13s     0.17s     0.17s
 
 Best times per dataset:
   p1: clingo usc (0.07s)
-  p2: maxmodels (0.07s)
-  p3: aspirena (365.97s)
+  p2: aspirena (0.07s)
+  p3: aspirena (56.69s)
   p4: clingo usc (0.17s)
-  p5: maxmodels (0.07s)
-  p6: aspirena (315.41s)
+  p5: aspirena (0.07s)
+  p6: acyc2solver_mip_fvs_smodels_gurobi (70.10s)
   p7: clingo usc (0.17s)
-  p8: clingo usc (0.13s)
-  p9: clingo usc (T/O)
+  p8: aspirena (0.07s)
+  p9: aspirena (121.33s)
   p10: clingo usc (0.13s)
 
 Problem: stacker-crane
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1          4.56s     0.33s     3.98s    16.91s     8.85s       T/O     2.94s    27.94s     0.12s
-p2        142.02s    47.39s     5.24s   116.52s    41.52s       T/O    11.59s    92.01s       T/O
-p3          8.99s     0.48s     4.27s    21.19s    16.79s       T/O     5.96s    26.92s     0.22s
-p4         10.20s     1.69s     4.32s       T/O    22.96s       T/O     6.31s    60.10s     4.04s
-p5          7.04s    12.61s     4.17s    44.54s    21.91s       T/O    10.63s    29.53s     0.77s
-p6          8.08s     3.15s     4.74s    41.37s    21.96s       T/O     6.56s    65.09s     0.28s
-p7          8.44s     0.75s     5.48s    41.42s     8.56s       T/O     4.45s    44.25s     0.12s
-p8          4.47s     2.65s     4.53s    69.73s    17.19s       T/O     5.05s    73.29s     0.17s
-p9         15.52s    23.83s     4.93s   129.41s    69.70s       T/O     8.98s   141.18s    43.15s
-p10         3.05s    19.16s     4.12s    11.77s    13.13s       T/O     5.21s    32.01s     0.07s
+p1          4.56s     0.33s     0.57s    16.91s     8.85s       T/O     2.94s    27.94s     0.12s    13.63s     1.28s
+p2        142.02s    47.39s     0.77s   116.52s    41.52s       T/O    11.59s    92.01s       T/O    29.63s     1.38s
+p3          8.99s     0.48s     0.62s    21.19s    16.79s       T/O     5.96s    26.92s     0.22s    18.97s     0.97s
+p4         10.20s     1.69s     0.72s       T/O    22.96s       T/O     6.31s    60.10s     4.04s    17.54s     1.38s
+p5          7.04s    12.61s     0.62s    44.54s    21.91s       T/O    10.63s    29.53s     0.77s    22.75s     0.97s
+p6          8.08s     3.15s     0.67s    41.37s    21.96s       T/O     6.56s    65.09s     0.28s    13.25s     1.02s
+p7          8.44s     0.75s     0.62s    41.42s     8.56s       T/O     4.45s    44.25s     0.12s    10.63s     0.97s
+p8          4.47s     2.65s     0.62s    69.73s    17.19s       T/O     5.05s    73.29s     0.17s    19.42s     0.97s
+p9         15.52s    23.83s     0.67s   129.41s    69.70s       T/O     8.98s   141.18s    43.15s    18.50s     1.02s
+p10         3.05s    19.16s     0.57s    11.77s    13.13s       T/O     5.21s    32.01s     0.07s     6.72s     1.28s
 
 Best times per dataset:
   p1: clingo usc (0.12s)
-  p2: aspirena (5.24s)
+  p2: aspirena (0.77s)
   p3: clingo usc (0.22s)
-  p4: clingo bnb (1.69s)
-  p5: clingo usc (0.77s)
+  p4: aspirena (0.72s)
+  p5: aspirena (0.62s)
   p6: clingo usc (0.28s)
   p7: clingo usc (0.12s)
   p8: clingo usc (0.17s)
-  p9: aspirena (4.93s)
+  p9: aspirena (0.67s)
   p10: clingo usc (0.07s)
 
 Problem: visit-all
 -----------------------------------------------
-Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo usc
+Dataset       dlvclingo bnb  aspirena     mingo maxmodels     ezsmtacyc2solver_mip_fvsacyc2solver_mip_veclingo uscacyc2solver_mip_ve_smodels_gurobiacyc2solver_mip_fvs_smodels_gurobi
 -----------------------------------------------
-p1          0.28s     0.13s     1.94s     3.96s     0.38s     9.82s     1.35s     1.09s     0.13s
-p2          0.53s     0.18s     3.96s     1.94s     0.39s     8.52s     1.34s     1.29s     0.07s
-p3          0.07s     0.13s     2.55s     6.71s     0.33s     5.55s     2.95s     2.84s     0.07s
-p4          0.23s     0.12s     3.26s    12.85s     0.32s     9.11s    12.24s    12.20s     0.28s
-p5         42.27s    16.26s    18.32s    65.88s     5.40s   224.57s     8.47s     8.57s    12.98s
-p6          0.12s     0.08s     0.90s     0.44s     0.14s    21.97s     0.27s     0.33s     0.07s
-p7          0.13s     0.04s     0.19s     0.43s     0.13s    21.82s     0.27s     0.33s     0.05s
-p8         55.87s     6.56s    10.68s    59.02s    10.06s   181.99s    30.38s    30.58s     8.56s
-p9            T/O       T/O   178.46s   597.41s   136.32s       T/O       T/O   421.91s   529.17s
-p10           T/O   344.22s    21.07s   473.94s   105.18s       T/O   145.22s   148.60s   273.50s
+p1          0.28s     0.13s     0.62s     3.96s     0.38s     9.82s     1.35s     1.09s     0.13s     0.22s     0.22s
+p2          0.53s     0.18s     0.72s     1.94s     0.39s     8.52s     1.34s     1.29s     0.07s     0.22s     0.22s
+p3          0.07s     0.13s     0.47s     6.71s     0.33s     5.55s     2.95s     2.84s     0.07s     0.17s     0.17s
+p4          0.23s     0.12s     0.62s    12.85s     0.32s     9.11s    12.24s    12.20s     0.28s     0.22s     0.22s
+p5         42.27s    16.26s     5.26s    65.88s     5.40s   224.57s     8.47s     8.57s    12.98s     0.97s     0.92s
+p6          0.12s     0.08s     0.07s     0.44s     0.14s    21.97s     0.27s     0.33s     0.07s     0.12s     0.12s
+p7          0.13s     0.04s     0.07s     0.43s     0.13s    21.82s     0.27s     0.33s     0.05s     0.12s     0.12s
+p8         55.87s     6.56s     4.64s    59.02s    10.06s   181.99s    30.38s    30.58s     8.56s     1.07s     1.07s
+p9            T/O       T/O    46.46s   597.41s   136.32s       T/O       T/O   421.91s   529.17s     8.53s     8.49s
+p10           T/O   344.22s    39.33s   473.94s   105.18s       T/O   145.22s   148.60s   273.50s     8.75s     8.74s
 
 Best times per dataset:
   p1: clingo bnb (0.13s)
   p2: clingo usc (0.07s)
   p3: dlv (0.07s)
   p4: clingo bnb (0.12s)
-  p5: maxmodels (5.40s)
-  p6: clingo usc (0.07s)
+  p5: acyc2solver_mip_fvs_smodels_gurobi (0.92s)
+  p6: aspirena (0.07s)
   p7: clingo bnb (0.04s)
-  p8: clingo bnb (6.56s)
-  p9: maxmodels (136.32s)
-  p10: aspirena (21.07s)
+  p8: acyc2solver_mip_ve_smodels_gurobi (1.07s)
+  p9: acyc2solver_mip_fvs_smodels_gurobi (8.49s)
+  p10: acyc2solver_mip_fvs_smodels_gurobi (8.74s)
 
 ===============================================
 OVERALL STATISTICS
@@ -413,178 +413,210 @@ OVERALL STATISTICS
 
 Solver rankings per problem (total time, success rate):
 Problem: connected-maximum-density-still-life
-  1. clingo bnb - Total: 0.64s (10/10)
-  2. clingo usc - Total: 0.68s (10/10)
+  1. clingo usc - Total: 0.63s (10/10)
+  2. clingo bnb - Total: 0.64s (10/10)
   3. dlv      - Total: 0.87s (10/10)
-  4. maxmodels - Total: 1.16s (10/10)
-  5. mingo    - Total: 3.40s (10/10)
-  6. aspirena - Total: 6.60s (10/10)
-  7. acyc2solver_mip_fvs - Total: 7.85s (10/10)
-  8. acyc2solver_mip_ve - Total: 13.47s (10/10)
-  9. ezsmt    - Total: 13.97s (10/10)
+  4. maxmodels - Total: 1.11s (10/10)
+  5. acyc2solver_mip_ve_smodels_gurobi - Total: 1.25s (10/10)
+  6. acyc2solver_mip_fvs_smodels_gurobi - Total: 1.25s (10/10)
+  7. aspirena - Total: 1.37s (10/10)
+  8. mingo    - Total: 3.40s (10/10)
+  9. acyc2solver_mip_fvs - Total: 7.85s (10/10)
+  10. acyc2solver_mip_ve - Total: 13.51s (10/10)
+  11. ezsmt    - Total: 14.02s (10/10)
 
 Problem: degree-bounded-connected-subgraph
   1. mingo    - Total: 2.60s (10/10)
-  2. aspirena - Total: 10.06s (10/10)
-  3. acyc2solver_mip_ve - Total: 38.80s (10/10)
-  4. acyc2solver_mip_fvs - Total: 38.97s (10/10)
-  5. maxmodels - Total: 695.76s (10/10)
-  6. clingo usc - Total: 1575.08s (8/10)
-  7. dlv      - Total: 2034.73s (7/10)
-  8. clingo bnb - Total: 6000.00s (0/10)
-  9. ezsmt    - Total: 6000.00s (0/10)
+  2. aspirena - Total: 11.86s (10/10)
+  3. acyc2solver_mip_fvs_smodels_gurobi - Total: 36.18s (10/10)
+  4. acyc2solver_mip_ve_smodels_gurobi - Total: 36.59s (10/10)
+  5. acyc2solver_mip_ve - Total: 38.80s (10/10)
+  6. acyc2solver_mip_fvs - Total: 38.97s (10/10)
+  7. maxmodels - Total: 695.76s (10/10)
+  8. clingo usc - Total: 1574.87s (8/10)
+  9. dlv      - Total: 2034.73s (7/10)
+  10. clingo bnb - Total: 6000.00s (0/10)
+  11. ezsmt    - Total: 6000.00s (0/10)
 
 Problem: dominating-set
   1. clingo usc - Total: 1.19s (10/10)
-  2. dlv      - Total: 3.90s (10/10)
-  3. acyc2solver_mip_ve - Total: 7.93s (10/10)
-  4. acyc2solver_mip_fvs - Total: 8.30s (10/10)
-  5. maxmodels - Total: 9.71s (10/10)
-  6. aspirena - Total: 14.83s (10/10)
-  7. mingo    - Total: 28.09s (10/10)
-  8. clingo bnb - Total: 4877.13s (2/10)
-  9. ezsmt    - Total: 6000.00s (0/10)
+  2. acyc2solver_mip_ve_smodels_gurobi - Total: 3.60s (10/10)
+  3. acyc2solver_mip_fvs_smodels_gurobi - Total: 3.60s (10/10)
+  4. dlv      - Total: 3.90s (10/10)
+  5. aspirena - Total: 6.52s (10/10)
+  6. acyc2solver_mip_ve - Total: 7.93s (10/10)
+  7. acyc2solver_mip_fvs - Total: 8.30s (10/10)
+  8. maxmodels - Total: 9.71s (10/10)
+  9. mingo    - Total: 28.09s (10/10)
+  10. clingo bnb - Total: 4877.13s (2/10)
+  11. ezsmt    - Total: 6000.00s (0/10)
 
 Problem: fault-detection-in-directed-graphs
   1. acyc2solver_mip_ve - Total: 1.70s (10/10)
   2. acyc2solver_mip_fvs - Total: 1.80s (10/10)
-  3. mingo    - Total: 5.64s (10/10)
-  4. aspirena - Total: 7.05s (10/10)
-  5. maxmodels - Total: 9.41s (10/10)
-  6. clingo usc - Total: 2955.70s (6/10)
-  7. dlv      - Total: 3828.85s (4/10)
-  8. clingo bnb - Total: 5751.84s (1/10)
-  9. ezsmt    - Total: 6000.00s (0/10)
+  3. acyc2solver_mip_ve_smodels_gurobi - Total: 2.10s (10/10)
+  4. acyc2solver_mip_fvs_smodels_gurobi - Total: 2.10s (10/10)
+  5. aspirena - Total: 2.95s (10/10)
+  6. mingo    - Total: 5.64s (10/10)
+  7. maxmodels - Total: 9.41s (10/10)
+  8. clingo usc - Total: 2955.70s (6/10)
+  9. dlv      - Total: 3828.85s (4/10)
+  10. clingo bnb - Total: 5751.84s (1/10)
+  11. ezsmt    - Total: 6000.00s (0/10)
 
 Problem: feedback-arc-set
   1. clingo usc - Total: 0.94s (10/10)
   2. dlv      - Total: 13.57s (10/10)
   3. maxmodels - Total: 139.17s (10/10)
-  4. aspirena - Total: 674.86s (10/10)
-  5. acyc2solver_mip_fvs - Total: 1557.96s (9/10)
-  6. acyc2solver_mip_ve - Total: 1900.35s (8/10)
-  7. mingo    - Total: 3170.68s (6/10)
-  8. clingo bnb - Total: 4795.69s (3/10)
-  9. ezsmt    - Total: 6000.00s (0/10)
+  4. aspirena - Total: 213.32s (10/10)
+  5. acyc2solver_mip_fvs_smodels_gurobi - Total: 248.54s (10/10)
+  6. acyc2solver_mip_ve_smodels_gurobi - Total: 412.47s (10/10)
+  7. acyc2solver_mip_fvs - Total: 1557.96s (9/10)
+  8. acyc2solver_mip_ve - Total: 1900.35s (8/10)
+  9. mingo    - Total: 3170.68s (6/10)
+  10. clingo bnb - Total: 4795.69s (3/10)
+  11. ezsmt    - Total: 6000.00s (0/10)
 
 Problem: knight-tour-with-holes
   1. clingo usc - Total: 2.85s (10/10)
   2. clingo bnb - Total: 16.75s (10/10)
   3. maxmodels - Total: 33.32s (10/10)
   4. dlv      - Total: 67.25s (10/10)
-  5. aspirena - Total: 371.25s (10/10)
-  6. acyc2solver_mip_fvs - Total: 430.20s (10/10)
-  7. acyc2solver_mip_ve - Total: 430.44s (10/10)
-  8. ezsmt    - Total: 779.82s (10/10)
-  9. mingo    - Total: 2767.57s (9/10)
+  5. aspirena - Total: 87.71s (10/10)
+  6. acyc2solver_mip_ve_smodels_gurobi - Total: 92.92s (10/10)
+  7. acyc2solver_mip_fvs_smodels_gurobi - Total: 93.05s (10/10)
+  8. acyc2solver_mip_fvs - Total: 430.20s (10/10)
+  9. acyc2solver_mip_ve - Total: 430.44s (10/10)
+  10. ezsmt    - Total: 779.82s (10/10)
+  11. mingo    - Total: 2767.57s (9/10)
 
 Problem: longest-circuit
-  1. acyc2solver_mip_ve - Total: 6.55s (10/10)
-  2. acyc2solver_mip_fvs - Total: 6.70s (10/10)
-  3. aspirena - Total: 8.39s (10/10)
-  4. mingo    - Total: 34.10s (10/10)
-  5. maxmodels - Total: 51.21s (10/10)
-  6. clingo bnb - Total: 5000.25s (3/10)
-  7. dlv      - Total: 6000.00s (0/10)
-  8. ezsmt    - Total: 6000.00s (0/10)
-  9. clingo usc - Total: 6000.00s (0/10)
+  1. aspirena - Total: 2.30s (10/10)
+  2. acyc2solver_mip_fvs_smodels_gurobi - Total: 5.80s (10/10)
+  3. acyc2solver_mip_ve_smodels_gurobi - Total: 6.05s (10/10)
+  4. acyc2solver_mip_ve - Total: 6.55s (10/10)
+  5. acyc2solver_mip_fvs - Total: 6.70s (10/10)
+  6. mingo    - Total: 34.10s (10/10)
+  7. maxmodels - Total: 51.21s (10/10)
+  8. clingo bnb - Total: 5000.25s (3/10)
+  9. dlv      - Total: 6000.00s (0/10)
+  10. ezsmt    - Total: 6000.00s (0/10)
+  11. clingo usc - Total: 6000.00s (0/10)
 
 Problem: longest-path
-  1. aspirena - Total: 3.90s (10/10)
-  2. acyc2solver_mip_ve - Total: 5.40s (10/10)
-  3. acyc2solver_mip_fvs - Total: 5.78s (10/10)
-  4. maxmodels - Total: 12.71s (10/10)
-  5. mingo    - Total: 27.73s (10/10)
-  6. clingo usc - Total: 2728.59s (7/10)
-  7. clingo bnb - Total: 3925.82s (9/10)
-  8. dlv      - Total: 5083.83s (2/10)
-  9. ezsmt    - Total: 6000.00s (0/10)
+  1. aspirena - Total: 1.25s (10/10)
+  2. acyc2solver_mip_fvs_smodels_gurobi - Total: 4.85s (10/10)
+  3. acyc2solver_mip_ve_smodels_gurobi - Total: 4.90s (10/10)
+  4. acyc2solver_mip_ve - Total: 5.40s (10/10)
+  5. acyc2solver_mip_fvs - Total: 5.78s (10/10)
+  6. maxmodels - Total: 12.71s (10/10)
+  7. mingo    - Total: 27.73s (10/10)
+  8. clingo usc - Total: 2728.59s (7/10)
+  9. clingo bnb - Total: 3925.82s (9/10)
+  10. dlv      - Total: 5083.83s (2/10)
+  11. ezsmt    - Total: 6000.00s (0/10)
 
 Problem: maximal-clique
-  1. acyc2solver_mip_ve - Total: 10.85s (10/10)
-  2. acyc2solver_mip_fvs - Total: 10.98s (10/10)
-  3. maxmodels - Total: 21.31s (10/10)
-  4. aspirena - Total: 38.02s (10/10)
-  5. clingo usc - Total: 39.62s (10/10)
-  6. mingo    - Total: 62.31s (10/10)
-  7. dlv      - Total: 2106.12s (9/10)
-  8. clingo bnb - Total: 6000.00s (0/10)
-  9. ezsmt    - Total: 6000.00s (0/10)
+  1. aspirena - Total: 10.37s (10/10)
+  2. acyc2solver_mip_ve - Total: 10.85s (10/10)
+  3. acyc2solver_mip_ve_smodels_gurobi - Total: 10.90s (10/10)
+  4. acyc2solver_mip_fvs - Total: 10.98s (10/10)
+  5. acyc2solver_mip_fvs_smodels_gurobi - Total: 11.01s (10/10)
+  6. maxmodels - Total: 21.31s (10/10)
+  7. clingo usc - Total: 39.62s (10/10)
+  8. mingo    - Total: 62.31s (10/10)
+  9. dlv      - Total: 2106.12s (9/10)
+  10. clingo bnb - Total: 6000.00s (0/10)
+  11. ezsmt    - Total: 6000.00s (0/10)
 
 Problem: maximum-leaf-spanning-tree
-  1. aspirena - Total: 54.80s (10/10)
-  2. mingo    - Total: 193.32s (10/10)
-  3. acyc2solver_mip_fvs - Total: 217.29s (10/10)
-  4. maxmodels - Total: 266.99s (10/10)
-  5. acyc2solver_mip_ve - Total: 503.00s (10/10)
-  6. clingo usc - Total: 2278.39s (8/10)
-  7. clingo bnb - Total: 2799.65s (9/10)
-  8. dlv      - Total: 3451.39s (7/10)
-  9. ezsmt    - Total: 6000.00s (0/10)
+  1. aspirena - Total: 19.46s (10/10)
+  2. acyc2solver_mip_fvs_smodels_gurobi - Total: 24.06s (10/10)
+  3. acyc2solver_mip_ve_smodels_gurobi - Total: 32.80s (10/10)
+  4. mingo    - Total: 193.32s (10/10)
+  5. acyc2solver_mip_fvs - Total: 217.29s (10/10)
+  6. maxmodels - Total: 266.99s (10/10)
+  7. acyc2solver_mip_ve - Total: 503.00s (10/10)
+  8. clingo usc - Total: 2278.39s (8/10)
+  9. clingo bnb - Total: 2799.65s (9/10)
+  10. dlv      - Total: 3451.39s (7/10)
+  11. ezsmt    - Total: 6000.00s (0/10)
 
 Problem: minimum-cover
-  1. clingo usc - Total: 3.45s (10/10)
-  2. acyc2solver_mip_fvs - Total: 4.76s (10/10)
-  3. acyc2solver_mip_ve - Total: 4.80s (10/10)
-  4. aspirena - Total: 11.34s (10/10)
-  5. maxmodels - Total: 13.15s (10/10)
-  6. mingo    - Total: 32.81s (10/10)
-  7. dlv      - Total: 43.53s (10/10)
-  8. clingo bnb - Total: 4243.99s (6/10)
-  9. ezsmt    - Total: 6000.00s (0/10)
+  1. acyc2solver_mip_ve_smodels_gurobi - Total: 1.65s (10/10)
+  2. acyc2solver_mip_fvs_smodels_gurobi - Total: 1.65s (10/10)
+  3. aspirena - Total: 3.25s (10/10)
+  4. clingo usc - Total: 3.45s (10/10)
+  5. acyc2solver_mip_fvs - Total: 4.76s (10/10)
+  6. acyc2solver_mip_ve - Total: 4.80s (10/10)
+  7. maxmodels - Total: 13.15s (10/10)
+  8. mingo    - Total: 32.81s (10/10)
+  9. dlv      - Total: 43.53s (10/10)
+  10. clingo bnb - Total: 4243.99s (6/10)
+  11. ezsmt    - Total: 6000.00s (0/10)
 
 Problem: set-packing
   1. clingo usc - Total: 0.36s (10/10)
-  2. dlv      - Total: 0.80s (10/10)
-  3. aspirena - Total: 1.22s (10/10)
-  4. acyc2solver_mip_ve - Total: 1.25s (10/10)
-  5. acyc2solver_mip_fvs - Total: 1.70s (10/10)
-  6. maxmodels - Total: 5.05s (10/10)
-  7. mingo    - Total: 8.93s (10/10)
-  8. clingo bnb - Total: 3537.92s (6/10)
-  9. ezsmt    - Total: 6000.00s (0/10)
+  2. aspirena - Total: 0.75s (10/10)
+  3. dlv      - Total: 0.80s (10/10)
+  4. acyc2solver_mip_ve_smodels_gurobi - Total: 1.20s (10/10)
+  5. acyc2solver_mip_fvs_smodels_gurobi - Total: 1.20s (10/10)
+  6. acyc2solver_mip_ve - Total: 1.25s (10/10)
+  7. acyc2solver_mip_fvs - Total: 1.70s (10/10)
+  8. maxmodels - Total: 5.05s (10/10)
+  9. mingo    - Total: 8.93s (10/10)
+  10. clingo bnb - Total: 3537.92s (6/10)
+  11. ezsmt    - Total: 6000.00s (0/10)
 
 Problem: solitaire
-  1. aspirena - Total: 1317.79s (9/10)
-  2. clingo usc - Total: 1800.81s (7/10)
-  3. clingo bnb - Total: 1801.81s (7/10)
-  4. maxmodels - Total: 1801.83s (7/10)
-  5. acyc2solver_mip_ve - Total: 1802.31s (7/10)
-  6. acyc2solver_mip_fvs - Total: 1802.45s (7/10)
-  7. dlv      - Total: 1802.84s (7/10)
-  8. mingo    - Total: 1809.03s (7/10)
-  9. ezsmt    - Total: 1865.95s (7/10)
+  1. aspirena - Total: 251.09s (10/10)
+  2. acyc2solver_mip_fvs_smodels_gurobi - Total: 271.05s (10/10)
+  3. acyc2solver_mip_ve_smodels_gurobi - Total: 271.11s (10/10)
+  4. clingo usc - Total: 1800.81s (7/10)
+  5. clingo bnb - Total: 1801.81s (7/10)
+  6. maxmodels - Total: 1801.83s (7/10)
+  7. acyc2solver_mip_ve - Total: 1802.31s (7/10)
+  8. acyc2solver_mip_fvs - Total: 1802.45s (7/10)
+  9. dlv      - Total: 1802.84s (7/10)
+  10. mingo    - Total: 1809.03s (7/10)
+  11. ezsmt    - Total: 1865.95s (7/10)
 
 Problem: stacker-crane
-  1. aspirena - Total: 45.78s (10/10)
-  2. acyc2solver_mip_fvs - Total: 67.68s (10/10)
-  3. clingo bnb - Total: 112.04s (10/10)
-  4. dlv      - Total: 212.37s (10/10)
-  5. maxmodels - Total: 242.57s (10/10)
-  6. acyc2solver_mip_ve - Total: 592.32s (10/10)
-  7. clingo usc - Total: 648.94s (9/10)
-  8. mingo    - Total: 1092.86s (9/10)
-  9. ezsmt    - Total: 6000.00s (0/10)
+  1. aspirena - Total: 6.45s (10/10)
+  2. acyc2solver_mip_fvs_smodels_gurobi - Total: 11.24s (10/10)
+  3. acyc2solver_mip_fvs - Total: 67.68s (10/10)
+  4. clingo bnb - Total: 112.04s (10/10)
+  5. acyc2solver_mip_ve_smodels_gurobi - Total: 171.04s (10/10)
+  6. dlv      - Total: 212.37s (10/10)
+  7. maxmodels - Total: 242.57s (10/10)
+  8. acyc2solver_mip_ve - Total: 592.32s (10/10)
+  9. clingo usc - Total: 648.94s (9/10)
+  10. mingo    - Total: 1092.86s (9/10)
+  11. ezsmt    - Total: 6000.00s (0/10)
 
 Problem: visit-all
-  1. aspirena - Total: 241.33s (10/10)
-  2. maxmodels - Total: 258.65s (10/10)
-  3. acyc2solver_mip_ve - Total: 627.74s (10/10)
-  4. acyc2solver_mip_fvs - Total: 802.49s (9/10)
-  5. clingo usc - Total: 824.88s (10/10)
-  6. clingo bnb - Total: 967.72s (9/10)
-  7. mingo    - Total: 1222.58s (10/10)
-  8. dlv      - Total: 1299.50s (8/10)
-  9. ezsmt    - Total: 1683.35s (8/10)
+  1. acyc2solver_mip_fvs_smodels_gurobi - Total: 20.29s (10/10)
+  2. acyc2solver_mip_ve_smodels_gurobi - Total: 20.39s (10/10)
+  3. aspirena - Total: 98.26s (10/10)
+  4. maxmodels - Total: 258.65s (10/10)
+  5. acyc2solver_mip_ve - Total: 627.74s (10/10)
+  6. acyc2solver_mip_fvs - Total: 802.49s (9/10)
+  7. clingo usc - Total: 824.88s (10/10)
+  8. clingo bnb - Total: 967.72s (9/10)
+  9. mingo    - Total: 1222.58s (10/10)
+  10. dlv      - Total: 1299.50s (8/10)
+  11. ezsmt    - Total: 1683.35s (8/10)
 
 
 Average execution times by solver:
 dlv        - Avg:  173.00s
 clingo bnb - Avg:  332.21s
-aspirena   - Avg:   18.72s
+aspirena   - Avg:    4.78s
 mingo      - Avg:   69.75s
 maxmodels  - Avg:   23.75s
-ezsmt      - Avg:  468.38s
+ezsmt      - Avg:  469.26s
 acyc2solver_mip_fvs - Avg:   33.10s
 acyc2solver_mip_ve - Avg:   39.65s
 clingo usc - Avg:  125.74s
+acyc2solver_mip_ve_smodels_gurobi - Avg:    7.13s
+acyc2solver_mip_fvs_smodels_gurobi - Avg:    4.91s

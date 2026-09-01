@@ -70,8 +70,7 @@ def parse_messages(messages: list) -> Dict[str, Dict[str, Dict[str, float]]]:
             exec_time = extract_execution_time(description)
             if exec_time is None:
                 continue
-            if solver not in results[problem_name][dataset]:
-                results[problem_name][dataset][solver] = exec_time
+            results[problem_name][dataset][solver] = exec_time
     #results[problem_name][dataset][solver] = exec_time
     return dict(results)
 
@@ -199,11 +198,13 @@ messages = []
 with open('obliczenia_page_1.json', 'r', encoding='utf-8') as f1, \
      open('obliczenia_page_2.json', 'r', encoding='utf-8') as f2, \
      open('obliczenia_page_3.json', 'r', encoding='utf-8') as f3, \
-     open('obliczenia-page-4.json', 'r', encoding='utf-8') as f4:
+     open('obliczenia-page-4.json', 'r', encoding='utf-8') as f4, \
+     open('obliczenia-page-5.json', 'r', encoding='utf-8') as f5:
     messages = json.load(f1)
     messages.extend(json.load(f2))
     messages.extend(json.load(f3))
     messages.extend(json.load(f4))
+    messages.extend(json.load(f5))
 
 results = parse_messages(messages)
 if not results:
