@@ -18,7 +18,7 @@ def solver_label(name: str) -> str:
 
 
 def mip_solver(gurobi: str) -> str:
-    return "Gurobi" if int(gurobi) else "CPLEX"
+    return "\\textsc{gurobi}" if int(gurobi) else "\\textsc{cplex}"
 
 
 def mark(flag: str) -> str:
@@ -32,14 +32,14 @@ def main() -> None:
     print(r"\begin{table}[htbp]")
     print(r"\centering")
     print(
-        r"\caption{Standings of explored solver configurations ranked by total time "
+        r"\caption{Standings of the toolchain configurations of the solver \\textsc{acyc2solver} ranked by total time "
         r"(lower is better).}"
     )
     print(r"\label{tab:exploration-standings}")
     print(r"\begin{tabular}{clccccr}")
     print(r"\toprule")
     print(
-        r"Rank & Solver & smodels & lp2normal2 & MIP solver & Suc. & Total time \\"
+        r"Rank & Solver & \\texttt{smodels} & \\texttt{lp2normal2} & MIP solver & Suc. & Total time \\"
     )
     print(r"\midrule")
     for row in rows:
